@@ -1,0 +1,184 @@
+.section-burgers{
+	//background-image: url('../img/bg/burgers.png');
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9b43b+0,ef9939+33,eb8c38+51,ec8f39+66,f9b43b+100 */
+	background: rgb(249,180,59); /* Old browsers */
+	//background: -moz-linear-gradient(top, rgba(249,180,59,1) 0%, rgba(239,153,57,1) 33%, rgba(235,140,56,1) 51%, rgba(236,143,57,1) 66%, rgba(249,180,59,1) 100%); /* FF3.6-15 */
+	//background: -webkit-linear-gradient(top, rgba(249,180,59,1) 0%,rgba(239,153,57,1) 33%,rgba(235,140,56,1) 51%,rgba(236,143,57,1) 66%,rgba(249,180,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(249,180,59,1) 0%,rgba(239,153,57,1) 33%,rgba(235,140,56,1) 51%,rgba(236,143,57,1) 66%,rgba(249,180,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); /* IE6-9 */
+}
+
+.our_burgers{
+	@extend %clearfix;	
+	@extend %section_center_content;
+	font-family: 'Gagalin';	
+
+
+	&__info{
+		width: 50%;
+		//height: 430px;
+		float: left;
+		text-align: right;	
+		padding: 80px 0 80px;
+	}
+
+	&__desc{
+		$margin_between_picture_and_desc: 45px;
+		
+		width: calc(50% - #{$margin_between_picture_and_desc});
+		margin-left: $margin_between_picture_and_desc;
+		float: right;
+
+		& p{
+   			line-height: 1.7;
+   			margin-bottom: 22px;
+		}
+	}
+}
+
+
+.composition{
+	$composition_link_size: 90px;
+    position: absolute;
+    top: 10px;
+    left: 33px;
+    text-align: left;
+
+	&::after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		left: 0;
+		top: 100%;
+	}
+
+
+  	&__link{
+		display: inline-block;
+		height: $composition_link_size;
+		width: $composition_link_size;  
+		border-radius: 5px;  	
+		background-color: rgba(227, 80, 40, .4);
+  		text-align: center;
+		color: #fff;
+  	}
+  	&:hover .composition__link{
+		background-color: #e35028;
+  	}
+
+  	&__picture{
+		background-image: url('../img/icons/burger.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 47px;
+		height: 47px;
+		margin: 15% auto 5%;
+  	}
+
+
+  	&__full{
+	  	position: absolute;
+	  	top: 0; left: -9999px;
+	  	opacity: 0;
+		border-radius: 5px;
+		background-color: rgba(255, 255, 255, .9);
+		font-family: 'Ubuntu_Medium';
+		color: rgb(47, 50, 52);
+		width: 270px;
+		padding: 9px 21px;
+
+		&table{
+			width: 100%;
+			}
+	}
+	&:hover .composition__full{
+		left: $composition_link_size;
+		opacity: 1;
+		transition: opacity 0.3 ease-in;
+	}
+
+
+	&__product{ //строка таблицы
+
+		&pic{//картинка продукта в таблице
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+    		height: 48px;
+			width: 50px;
+		}
+
+		&name{//название продукта в таблице
+
+		}
+
+		&gramm{//граммы продукта в таблице
+
+		}
+	}
+
+	&__tablecell{
+	vertical-align: middle;
+	}
+
+}
+
+
+.our_burgers__price{
+	color: $deep-orange-color;
+	line-height: 1;
+}
+
+.our_burgers__currencyprice{
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 30px;
+	padding-bottom: 5px;
+	margin-right: 20px;
+}
+
+.our_burgers__numericprice{
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 72px;	
+}
+
+.FAT__picturesvg{
+	fill: rgba(248,207,157,.8);
+	height: 60px;
+}
+
+.FAT{
+	position: absolute;
+    left: 35px; bottom: 5px;
+    width: 60px;
+    height: 80px;  
+    text-align: center;
+    color: rgba(248,207,157,.8);
+
+	&__picture{
+		height: 60px;
+		background-image: url('../img/icons/kkal.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__numeric{
+		margin: -37px 0 13px;
+		font-size: 20px;
+	}
+
+	&__kkal{
+		text-transform: uppercase;
+	}
+
+
+}
+
+
+.our_burgers__title{
+	line-height: 0.9;
+	margin: 5px 0 40px;
+}

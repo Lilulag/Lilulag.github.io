@@ -1,0 +1,23 @@
+//colors
+
+//mixins
+@import "layout/mixins.scss";
+
+// layout
+@import "layout/normalize.scss";
+@import "layout/adjustment.scss";
+// @import "layout/font-awesome.scss";
+@import "layout/fonts.scss";
+
+
+// sections
+@import "sections/header.scss";
+@import "sections/firstscreen.scss";
+@import "sections/we.scss";
+@import "sections/burgers.scss";
+@import "sections/team.scss";
+@import "sections/menu.scss";
+@import "sections/reviews.scss";
+@import "sections/form.scss";
+@import "sections/map.scss";
+@import "sections/footer.scss";

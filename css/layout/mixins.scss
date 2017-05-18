@@ -1,0 +1,80 @@
+//colors
+$orange-color: #f9b43b;
+$deep-orange-color: #e35028;
+
+//макс/мин ширина контента
+$static_width: 940px;
+
+//kostyles
+%clearfix{
+	&::after, &::before {
+    	content: "";
+    	display: table;
+	}
+		&::after {
+    	clear: both;
+	}
+}
+
+@mixin inlinefix($fontsize: 14px){
+	font-size: 0px; 
+	& > * {
+		font-size: $fontsize; 	/* для инлайновых элементов, убираем отсутпы */
+	}
+}
+
+
+%inline-vertical-centr{
+	&::before {					/* центрирование блока в блоке, родительский элемент */
+		content: '';
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+%inline-vertical-centr-child{
+								/* центрирование блока в блоке, центрируемый элемент */
+		display: inline-block;
+		vertical-align: middle;
+}
+
+
+
+//для центрирования содержимого секций
+%section_center_content{
+	margin: 0 auto;
+	position: relative; 
+	top: 50%; 
+	transform: 
+	translateY(-50%);
+	overflow: hidden;
+}
+
+
+// adaptive
+
+// Ноутбук
+// Ширина экрана - 992px
+// Ширина контейнера - 750px
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+ 	 			@content; 
+ 	}
+}
+// Планшет
+// Ширина экрана - 768px
+// Ширина контейнера - 480px
+@mixin tablet {
+	@media screen and (max-width: 768px) {
+ 	 			@content; 
+ 	}
+}
+// Телефон
+// Ширина экрана - 480px и меньше
+// Ширина контейнера - 95%
+@mixin phone {
+	@media screen and (max-width: 480px) {
+ 	 			@content; 
+ 	}
+}

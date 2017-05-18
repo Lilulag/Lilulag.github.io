@@ -1,0 +1,53 @@
+.section-firstscreen{
+	background-image: url('../img/bg/firstscreen.png');
+	position: relative;
+
+	&::after{
+		content: url('../img/icons/arrow-scroll.svg');
+		position: absolute;
+		cursor: pointer;
+		bottom: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.what_do_we_make{
+	@extend %clearfix;	
+	@extend %section_center_content;
+
+	width: 90%; //?????????????? зачем
+
+	&__picture{
+		width: 50%;
+		height: 430px;
+		float: left;
+		text-align: right;
+	}
+
+	&__desc{
+		$margin_between_picture_and_desc: 10px;
+		
+		width: calc(50% - #{$margin_between_picture_and_desc});
+		margin-left: $margin_between_picture_and_desc;
+		float: right;
+		font-size: 65px;
+		padding: 130px 0;
+	}
+}
+
+.what_do_we_make__img{
+	width: 96%;
+	max-height: 100%;
+}
+
+.what_do_we_make__title{
+	margin-bottom: 20px;
+	color: $orange-color;
+}
+
+.what_do_we_make__text{
+    line-height: 1;
+    font-family: 'Lifehack';	
+}
+

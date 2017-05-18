@@ -1,0 +1,42 @@
+.section-we{
+	background-image: url('../img/bg/we.png');
+	text-align: center;
+}
+
+.we_are_the_best{
+	@extend %section_center_content;
+	color: #2f3234;
+
+}
+
+.we__title{
+	margin-bottom: 80px;
+}
+
+.advantages_list{
+	@extend %clearfix;	
+
+	&__item{
+	float: left;
+	width: 33.33%;
+
+		& h3{
+			font-family: 'Lifehack';
+			font-size: 24px;
+			margin: 20px 0 12px;
+		}	
+
+		& p{
+			line-height: 2;
+		}
+	}
+}
+
+.advantages_list__picture{
+	height: 95px;
+
+}
+
+.advantages_list__img{
+	max-height: 100%;
+}

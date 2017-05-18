@@ -1,0 +1,40 @@
+.footer{
+	width: 100%;
+	background-color: rgba(0,0,0,.9);
+	position: absolute;
+	bottom: 0;
+	padding: 10px 0;
+}
+
+.footer__left{
+	@extend %inline-vertical-centr-child;
+	width: 80%;
+}
+
+.footer__phonenumber{
+    font-family: 'Ubuntu_Bold';
+	color: #d64c26;
+	margin-top: 10px;
+}
+
+
+.footer__right{	
+	@extend %inline-vertical-centr-child;
+	width: 20%;
+}
+
+.socials__item{
+	@extend %inline-vertical-centr-child;
+	margin-left: 15px;
+}
+.socials__link{
+	display: block;
+}
+
+.socials__icon{
+	fill: #585858;
+
+	&:hover	{
+		fill: #fff;
+	}
+}
