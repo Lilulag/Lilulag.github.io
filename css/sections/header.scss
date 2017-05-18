@@ -1,11 +1,16 @@
 .header{
-	width: 100%;
-	background-color: rgba(0,0,0,.1);
+	@extend %inline-vertical-centr;
+	width: $static_width;
+	//background-color: rgba(0,0,0,.5);
 	position: absolute;
 	top: 0;
 	padding: 12px 0;
 	z-index: 100;
+	max-height: 200px;
+	overflow: hidden;
+	@include inlinefix;
 }
+
 
 .header__left{
 	@extend %inline-vertical-centr-child;
@@ -14,9 +19,10 @@
 
 .logo{
 	height: 70px;
-	// width: 100px;
-	background: url('../img/icons/logo.svg') no-repeat;
-	background-size: contain;
+	width: 90px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 
 	&__picture{
 		display: none;

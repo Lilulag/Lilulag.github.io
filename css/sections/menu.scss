@@ -23,10 +23,10 @@
 
 .ourmenu__item{
 	height: 100%;
-	width: 80px;
+	min-width: 80px;
 	float: left;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center;
 	background-size: cover;
 
 	&-meetlovers{
@@ -41,11 +41,31 @@
 }
 
 .ourmenu__link{
-	display: block;
-	width: 100%;
+	display: inline-block;
+	width: 80px;
 	height: 100%;
 	position: relative;
 }
+
+.ourmenu__fulldesc{
+	display: inline-block;
+	width: 540px;
+	height: 100%;
+	background-color: rgba(47, 50, 52, .9);
+	vertical-align: top;
+
+	display: none;
+
+}
+
+
+.ourmenu__fulltext{
+	display: block;
+	height: 100%;
+	padding: 10% 7%;
+	line-height: 1.8;
+}
+
 
 .ourmenu__text{
 	display: inline-block;  

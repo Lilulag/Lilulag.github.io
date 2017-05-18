@@ -49,14 +49,14 @@ body{
 }
 
 
-.container{ //для хэдера и футера
-	@extend %inline-vertical-centr;
-	margin: 0 auto;
-	width: 940px;
-	max-height: 200px;
-	overflow: hidden;
-	@include inlinefix;
-}
+// .container{ //для хэдера и футера
+// 	@extend %inline-vertical-centr;
+// 	margin: 0 auto;
+// 	width: 940px;
+// 	max-height: 200px;
+// 	overflow: hidden;
+// 	@include inlinefix;
+// }
 
 
 .button{

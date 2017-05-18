@@ -5,7 +5,7 @@
 .mainmenu::after, .what_do_we_make::after, .advantages_list::after, .our_burgers::after, .ourmenu__list::after, .reviews__list::after {
   clear: both; }
 
-.container::before {
+.header::before, .container::before {
   /* ÐåðÁð¢ÐéÐÇð©ÐÇð¥ð▓ð░ð¢ð©ðÁ ð▒ð╗ð¥ð║ð░ ð▓ ð▒ð╗ð¥ð║ðÁ, ÐÇð¥ð┤ð©ÐéðÁð╗ÐîÐüð║ð©ð╣ Ðìð╗ðÁð╝ðÁð¢Ðé */
   content: '';
   height: 100%;
@@ -17,7 +17,7 @@
   display: inline-block;
   vertical-align: middle; }
 
-.what_do_we_make, .we_are_the_best, .our_burgers {
+.what_do_we_make, .we_are_the_best, .our_burgers, .formorder {
   margin: 0 auto;
   position: relative;
   top: 50%;
@@ -445,16 +445,6 @@ body {
   font-size: 70px;
   font-family: 'Gagalin'; }
 
-.container {
-  margin: 0 auto;
-  width: 940px;
-  max-height: 200px;
-  overflow: hidden;
-  font-size: 0px; }
-  .container > * {
-    font-size: 14px
-    /* ð┤ð╗ÐÅ ð©ð¢ð╗ð░ð╣ð¢ð¥ð▓ÐïÐà Ðìð╗ðÁð╝ðÁð¢Ðéð¥ð▓, Ðâð▒ð©ÐÇð░ðÁð╝ ð¥ÐéÐüÐâÐéð┐Ðï */ }
-
 .button {
   display: inline-block;
   vertical-align: middle; }
@@ -507,20 +497,27 @@ body {
   font-weight: normal;
   font-style: normal; }
 .header {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  width: 940px;
   position: absolute;
   top: 0;
   padding: 12px 0;
-  z-index: 100; }
+  z-index: 100;
+  max-height: 200px;
+  overflow: hidden;
+  font-size: 0px; }
+  .header > * {
+    font-size: 14px
+    /* ð┤ð╗ÐÅ ð©ð¢ð╗ð░ð╣ð¢ð¥ð▓ÐïÐà Ðìð╗ðÁð╝ðÁð¢Ðéð¥ð▓, Ðâð▒ð©ÐÇð░ðÁð╝ ð¥ÐéÐüÐâÐéð┐Ðï */ }
 
 .header__left {
   width: 20%; }
 
 .logo {
   height: 70px;
-  background: url("../img/icons/logo.svg") no-repeat;
-  background-size: contain; }
+  width: 90px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
   .logo__picture {
     display: none; }
 
@@ -581,19 +578,17 @@ body {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
 
-.what_do_we_make {
-  width: 90%; }
-  .what_do_we_make__picture {
-    width: 50%;
-    height: 430px;
-    float: left;
-    text-align: right; }
-  .what_do_we_make__desc {
-    width: calc(50% - 10px);
-    margin-left: 10px;
-    float: right;
-    font-size: 65px;
-    padding: 130px 0; }
+.what_do_we_make__picture {
+  width: 50%;
+  height: 430px;
+  float: left;
+  text-align: right; }
+.what_do_we_make__desc {
+  width: calc(50% - 10px);
+  margin-left: 10px;
+  float: right;
+  font-size: 65px;
+  padding: 130px 0; }
 
 .what_do_we_make__img {
   width: 96%;
@@ -854,10 +849,10 @@ body {
 
 .ourmenu__item {
   height: 100%;
-  width: 80px;
+  min-width: 80px;
   float: left;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover; }
   .ourmenu__item-meetlovers {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/content/meetlovers.png");
@@ -870,10 +865,24 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/content/dietaries.png"); }
 
 .ourmenu__link {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 80px;
   height: 100%;
   position: relative; }
+
+.ourmenu__fulldesc {
+  display: inline-block;
+  width: 540px;
+  height: 100%;
+  background-color: rgba(47, 50, 52, 0.9);
+  vertical-align: top;
+  display: none; }
+
+.ourmenu__fulltext {
+  display: block;
+  height: 100%;
+  padding: 10% 7%;
+  line-height: 1.8; }
 
 .ourmenu__text {
   display: inline-block;
@@ -970,6 +979,16 @@ body {
   position: absolute;
   bottom: 0;
   padding: 10px 0; }
+
+.container {
+  margin: 0 auto;
+  width: 940px;
+  max-height: 200px;
+  overflow: hidden;
+  font-size: 0px; }
+  .container > * {
+    font-size: 14px
+    /* ð┤ð╗ÐÅ ð©ð¢ð╗ð░ð╣ð¢ð¥ð▓ÐïÐà Ðìð╗ðÁð╝ðÁð¢Ðéð¥ð▓, Ðâð▒ð©ÐÇð░ðÁð╝ ð¥ÐéÐüÐâÐéð┐Ðï */ }
 
 .footer__left {
   width: 80%; }

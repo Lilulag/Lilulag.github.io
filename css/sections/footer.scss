@@ -6,6 +6,15 @@
 	padding: 10px 0;
 }
 
+.container{ 
+	@extend %inline-vertical-centr;
+	margin: 0 auto;
+	width: 940px;
+	max-height: 200px;
+	overflow: hidden;
+	@include inlinefix;
+}
+
 .footer__left{
 	@extend %inline-vertical-centr-child;
 	width: 80%;
