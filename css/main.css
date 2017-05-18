@@ -1,8 +1,8 @@
 @charset "UTF-8";
-.mainmenu::after, .what_do_we_make::after, .advantages_list::after, .our_burgers::after, .ourmenu__list::after, .reviews__list::after, .mainmenu::before, .what_do_we_make::before, .advantages_list::before, .our_burgers::before, .ourmenu__list::before, .reviews__list::before {
+.mainmenu::after, .what_do_we_make::after, .advantages_list::after, .our_burgers::after, .ourmenu__list::after, .reviews__list::after, .formorder::after, .mainmenu::before, .what_do_we_make::before, .advantages_list::before, .our_burgers::before, .ourmenu__list::before, .reviews__list::before, .formorder::before {
   content: "";
   display: table; }
-.mainmenu::after, .what_do_we_make::after, .advantages_list::after, .our_burgers::after, .ourmenu__list::after, .reviews__list::after {
+.mainmenu::after, .what_do_we_make::after, .advantages_list::after, .our_burgers::after, .ourmenu__list::after, .reviews__list::after, .formorder::after {
   clear: both; }
 
 .header::before, .container::before {
@@ -17,13 +17,14 @@
   display: inline-block;
   vertical-align: middle; }
 
-.what_do_we_make, .we_are_the_best, .our_burgers, .formorder {
+.what_do_we_make, .we_are_the_best, .our_burgers, .order {
   margin: 0 auto;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  max-height: 100%;
   overflow: hidden; }
 
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -969,6 +970,40 @@ body {
 
 .section-form {
   background-image: url("../img/bg/form.png"); }
+
+.order__title {
+  color: #f9b43b;
+  text-align: center;
+  margin-bottom: 80px; }
+
+.formorder__left {
+  float: left;
+  width: 49%; }
+.formorder__right {
+  float: right;
+  width: 49%; }
+
+.formorder__row {
+  font-size: 0px;
+  margin-bottom: 20px; }
+  .formorder__row > * {
+    font-size: 14px
+    /* ð┤ð╗ÐÅ ð©ð¢ð╗ð░ð╣ð¢ð¥ð▓ÐïÐà Ðìð╗ðÁð╝ðÁð¢Ðéð¥ð▓, Ðâð▒ð©ÐÇð░ðÁð╝ ð¥ÐéÐüÐâÐéð┐Ðï */ }
+
+.formorder__input {
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 20px;
+  width: calc(100% - 20px); }
+  .formorder__input-2 {
+    width: calc( (100% - 20px*2 )/2); }
+  .formorder__input-4 {
+    width: calc( (100% - 20px*4 )/4); }
+  .formorder__input-textarea {
+    width: calc(100% - 20px);
+    height: 110px;
+    resize: none; }
 
 .section-map {
   background-image: url("../img/bg/map.png"); }
