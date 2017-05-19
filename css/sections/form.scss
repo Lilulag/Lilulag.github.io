@@ -12,45 +12,68 @@
 	margin-bottom: 80px;
 }
 
+
+	$margin_between_inputs: 20px;//отступы между полями ввода
+
 .formorder{
 	@extend %clearfix;	
+	font-family: 'Ubuntu_Light';
 
 	&__left{
 		float: left;
-		width: 49%;
+		width: calc(50% - #{$margin_between_inputs});
 	}
 
 	&__right{
 		float: right;
-		width: 49%;
+		width: calc(50% - #{$margin_between_inputs});
 	}
 }
 
 .formorder__row{
 	@include inlinefix;
-	margin-bottom: 20px;
+	margin-bottom: 16px;
+
+	& label:last-child{
+		margin-right: 0;
+	}
+
+	&-lessmarginbottom{
+		margin-bottom: 2px;
+	}
 }
 
-.formorder__input{
-	$margin_between_inputs: 20px;
-	height: 35px;
-	padding: 5px;
-	border-radius: 5px;
+.formorder__item{
+	display: inline-block;
 	margin-right: $margin_between_inputs;
-	width: calc(100% - #{$margin_between_inputs});
+	width: 100%;	
 
 	&-2{
-		width: calc( (100% - #{$margin_between_inputs}*2 )/2);
+		width: calc( (100% - #{$margin_between_inputs}*(2 - 1) )/2);
 	}
 
 	&-4{
-		width: calc( (100% - #{$margin_between_inputs}*4 )/4);
-	}	
+		width: calc( (100% - #{$margin_between_inputs}*(4 - 1) )/4);
+	}		
+
+	&text{//текст над инпутом
+		margin-bottom: 10px;
+	}
+}
+
+.formorder__input{
+	width: 100%;
+	height: 35px;
+	padding: 5px;
+	border-radius: 5px;
 
 	&-textarea{
-		width: calc(100% - #{$margin_between_inputs});
-		height: 110px;
+		height: 112px;
 		resize: none; 
 	}
+}
+
+.formorder__payment, .formorder__dontcall{//стандартные от чекбоксов и радио не видны
+	display: none;
 }
 

@@ -598,21 +598,64 @@
 						<form action="" class="formorder">
 							<div class="formorder__left">
 								<div class="formorder__row">
-									<input type="text" class="formorder__input formorder__input-2">
-									<input type="text" class="formorder__input formorder__input-2">
+									<label class="formorder__item formorder__item-2">
+										<div class="formorder__itemtext">Имя</div>
+										<input type="text" class="formorder__input">
+									</label>
+									<label class="formorder__item formorder__item-2">
+										<div class="formorder__itemtext">Телефон</div>
+										<input type="text" class="formorder__input">
+									</label>
 								</div>
 								<div class="formorder__row">
-									<input type="text" class="formorder__input">
+									<label class="formorder__item">
+										<div class="formorder__itemtext">Улица</div>
+										<input type="text" class="formorder__input">
+									</label>
 								</div>
 								<div class="formorder__row">
-									<input type="text" class="formorder__input formorder__input-4">
-									<input type="text" class="formorder__input formorder__input-4">
-									<input type="text" class="formorder__input formorder__input-4">
-									<input type="text" class="formorder__input formorder__input-4">
+									<label class="formorder__item formorder__item-4">
+										<div class="formorder__itemtext">Дом</div>
+										<input type="text" class="formorder__input">
+									</label>
+									<label class="formorder__item formorder__item-4">
+										<div class="formorder__itemtext">Корпус</div>
+										<input type="text" class="formorder__input">
+									</label>
+									<label class="formorder__item formorder__item-4">
+										<div class="formorder__itemtext">Квартира</div>
+										<input type="text" class="formorder__input">
+									</label>
+									<label class="formorder__item formorder__item-4">
+										<div class="formorder__itemtext">Этаж</div>
+										<input type="text" class="formorder__input">
+									</label>
 								</div>
 							</div>
 							<div class="formorder__right">
-								<textarea class="formorder__input formorder__input-textarea" name=""></textarea>
+								<div class="formorder__row">
+									<label class="formorder__item">
+										<div class="formorder__itemtext">Комментарий</div>
+										<textarea class="formorder__input formorder__input-textarea" name=""></textarea>
+									</label>
+								</div>
+								<div class="formorder__row">
+									<label class="formorder__item formorder__item-2">
+										<div class="formorder__itemtext">Потребуется сдача</div>
+										<input type="radio" name="moneyinfo" class="formorder__payment formorder__payment-change">
+									</label>
+									<label class="formorder__item formorder__item-2">
+										<div class="formorder__itemtext">Оплата по карте</div>
+										<input type="radio" name="moneyinfo" class="formorder__payment formorder__payment-cardpayment">
+									</label>
+								</div>
+								<div class="formorder__row formorder__row-lessmarginbottom">
+									<label class="formorder__item">
+										<div class="formorder__itemtext">Не перезванивать</div>
+										<input type="checkbox" name="dontcallme" class="formorder__dontcall">
+									</label>
+								</div>
+
 
 								<div class="button button-makeorder">
 									<a href="#" class="button__link">Заказать</a>
