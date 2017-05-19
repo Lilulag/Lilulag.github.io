@@ -38,13 +38,42 @@
 	&-dietaries{
 		background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/dietaries.png');
 	}
+
+
+	&.active .ourmenu__fulldesc{
+		display: inline-block;
+	}
+	
+	&.active{
+		animation: rightAccordeon 0.3s ease-out;
+	}
+	
 }
+
+
+@keyframes rightAccordeon{
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 
 .ourmenu__link{
 	display: inline-block;
 	width: 80px;
 	height: 100%;
 	position: relative;
+
+	// &.active + .ourmenu__fulldesc{
+	// 	display: inline-block;
+	// 	animation: rightAccordeon 0.3s ease-out;
+	// }
 }
 
 .ourmenu__fulldesc{
@@ -53,9 +82,7 @@
 	height: 100%;
 	background-color: rgba(47, 50, 52, .9);
 	vertical-align: top;
-
 	display: none;
-
 }
 
 

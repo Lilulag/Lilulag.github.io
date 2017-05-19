@@ -3,14 +3,14 @@
 	text-align: center;
 }
 
-.we_are_the_best{
+.thebest{
 	@extend %section_center_content;
 	color: #2f3234;
 
 }
 
 .we__title{
-	margin-bottom: 80px;
+	margin-bottom: 70px;
 }
 
 .advantages_list{
@@ -23,7 +23,7 @@
 		& h3{
 			font-family: 'Lifehack';
 			font-size: 24px;
-			margin: 20px 0 12px;
+			margin: 25px 0 12px;
 		}	
 
 		& p{
