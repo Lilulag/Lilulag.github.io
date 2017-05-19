@@ -48,16 +48,46 @@
 	margin-right: $margin_between_inputs;
 	width: 100%;	
 
-	&-2{
-		width: calc( (100% - #{$margin_between_inputs}*(2 - 1) )/2);
+	@each $quantity in 2,4{//вычисляем ширину инпутов исходя из их количества в строке
+		&-#{$quantity}{
+			width: calc( (100% - #{$margin_between_inputs}*(#{$quantity} - 1) )/#{$quantity});
+		}
 	}
+	// &-2{
+	// 	width: calc( (100% - #{$margin_between_inputs}*(2 - 1) )/2);
+	// }
 
-	&-4{
-		width: calc( (100% - #{$margin_between_inputs}*(4 - 1) )/4);
-	}		
+	// &-4{
+	// 	width: calc( (100% - #{$margin_between_inputs}*(4 - 1) )/4);
+	// }		
 
 	&text{//текст над инпутом
 		margin-bottom: 10px;
+
+		&-shift{
+			padding-left: 25px;
+			position: relative;
+
+
+			&::before{
+				content: '';
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #fff;
+				border: 4px solid #fff;
+			}
+
+			&.formorder__itemtext-round{
+				&::before{
+					border-radius: 50%;
+				}
+			}			
+
+
+		}
 	}
 }
 
@@ -75,5 +105,9 @@
 
 .formorder__payment, .formorder__dontcall{//стандартные от чекбоксов и радио не видны
 	display: none;
+	&:checked + .formorder__itemtext-shift::before{
+		background-color: $orange-color;
+	}
 }
+
 

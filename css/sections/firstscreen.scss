@@ -12,7 +12,7 @@
 	}
 }
 
-.what_do_we_make{
+.wemake{
 	@extend %clearfix;	
 	@extend %section_center_content;
 
@@ -35,17 +35,17 @@
 	}
 }
 
-.what_do_we_make__img{
+.wemake__img{
 	width: 96%;
 	max-height: 100%;
 }
 
-.what_do_we_make__title{
+.wemake__title{
 	margin-bottom: 20px;
 	color: $orange-color;
 }
 
-.what_do_we_make__text{
+.wemake__text{
     line-height: 1;
     font-family: 'Lifehack';	
 }
