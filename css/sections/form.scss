@@ -83,6 +83,7 @@
 			&.formorder__itemtext-round{
 				&::before{
 					border-radius: 50%;
+
 				}
 			}			
 
@@ -105,8 +106,14 @@
 
 .formorder__payment, .formorder__dontcall{//стандартные от чекбоксов и радио не видны
 	display: none;
-	&:checked + .formorder__itemtext-shift::before{
-		background-color: $orange-color;
+	&:checked + .formorder__itemtext-shift.formorder__itemtext-round::before{
+		background-color: $deep-orange-color;
+	}
+	&:checked + .formorder__itemtext-shift.formorder__itemtext-square::before{
+		background-image: url('../img/icons/check.svg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 }
 

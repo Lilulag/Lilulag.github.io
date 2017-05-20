@@ -29,15 +29,22 @@
 	background-position: center;
 	background-size: cover;
 
-	&-meetlovers{
-		background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/meetlovers.png');
+	@each $type_menu in meetlovers, vegetarians, dietaries{
+		&-#{$type_menu}{
+		background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/#{$type_menu}.png');
+		}	
 	}
-	&-vegetarians{
-		background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/vegetarians.png');		
-	}
-	&-dietaries{
-		background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/dietaries.png');
-	}
+
+	
+	// &-meetlovers{
+	// 	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/meetlovers.png');
+	// }
+	// &-vegetarians{
+	// 	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/vegetarians.png');		
+	// }
+	// &-dietaries{
+	// 	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/dietaries.png');
+	// }
 
 
 	&.active .ourmenu__fulldesc{
@@ -69,11 +76,6 @@
 	width: 80px;
 	height: 100%;
 	position: relative;
-
-	// &.active + .ourmenu__fulldesc{
-	// 	display: inline-block;
-	// 	animation: rightAccordeon 0.3s ease-out;
-	// }
 }
 
 .ourmenu__fulldesc{
@@ -106,7 +108,8 @@
 	overflow: hidden;
 	transform-origin: 0 0;
 	transform: rotate(-90deg); 	
-	width: 650px; 
+    width: 100vh;
+    min-width: 650px;
 	height: 80px; 
 	line-height: 60px; //80 - паддинги верх и низ по 10px
 	

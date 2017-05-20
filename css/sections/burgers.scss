@@ -43,15 +43,7 @@
     top: 10px;
     left: 33px;
     text-align: left;
-
-	&::after{
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 50%;
-		left: 0;
-		top: 100%;
-	}
+    
 
 
   	&__link{
@@ -62,6 +54,7 @@
 		background-color: rgba(227, 80, 40, .4);
   		text-align: center;
 		color: #fff;
+		transition: background-color 0.3s ease-in;
   	}
   	&:hover .composition__link{
 		background-color: #e35028;
@@ -87,6 +80,15 @@
 		color: rgb(47, 50, 52);
 		width: 270px;
 		padding: 9px 21px;
+
+		&::after{
+			content: '';
+			position: absolute;
+			width: 10%;
+			height: 100%;
+			right: 100%;
+			top: 0;
+		}
 
 		&table{
 			width: 100%;

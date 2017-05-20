@@ -1,19 +1,19 @@
 $(document).ready(function(){
 
-	$('.ourteam__name').on('click', function(){
+	$('.ourteam__item').on('click', function(){
 
 		if ($(this).hasClass('active'))
 			{
-				$(this).siblings('.ourteam__info').slideUp(300);
+				$(this).children('.ourteam__info').slideUp(300);
 				$(this).removeClass('active');
 			}
 		else
 			{
-				var prevActive = $('.ourteam__name.active');
-				prevActive.siblings('.ourteam__info').slideUp(300);
+				var prevActive = $('.ourteam__item.active');
+				prevActive.children('.ourteam__info').slideUp(300);
 				prevActive.removeClass('active');
 
-				$(this).siblings('.ourteam__info').slideDown(300); 
+				$(this).children('.ourteam__info').slideDown(300); 
 				$(this).addClass('active');
 			}
 	})
