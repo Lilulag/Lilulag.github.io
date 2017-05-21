@@ -439,7 +439,9 @@ body {
 
 .section {
   height: 100vh;
-  min-height: 650px; }
+  min-height: 650px;
+  position: relative;
+  z-index: 1; }
 
 .section__container {
   height: 100%;

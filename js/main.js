@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 			//	скрываем видео по завершению начало
 	(function(){
-		$('.is_overlay video').delay(22000).animate(
+		$('.is_overlay video').delay(23000).animate(
   			{
    				opacity: "0"
   			}, 2500);
