@@ -16,6 +16,12 @@ $static_width: 940px;
 	}
 }
 
+%bgImg{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 @mixin inlinefix($fontsize: 14px){
 	font-size: 0px; 
 	& > * {

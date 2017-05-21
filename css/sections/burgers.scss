@@ -8,11 +8,20 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); /* IE6-9 */
 }
 
-.our_burgers{
-	@extend %clearfix;	
-	@extend %section_center_content;
-	font-family: 'Gagalin';	
+.burgers_slider{
+	display: block;
+	height: 100%;
 
+	&__item{
+		@extend %clearfix;	
+		@extend %section_center_content;
+		font-family: 'Gagalin';	
+		//display: none;
+
+		&.active{
+			display: block;
+		}
+	}
 
 	&__info{
 		width: 50%;
@@ -43,7 +52,6 @@
     top: 10px;
     left: 33px;
     text-align: left;
-    
 
 
   	&__link{
@@ -62,8 +70,7 @@
 
   	&__picture{
 		background-image: url('../img/icons/burger.svg');
-		background-repeat: no-repeat;
-		background-size: cover;
+		@extend %bgImg;
 		width: 47px;
 		height: 47px;
 		margin: 15% auto 5%;
@@ -72,14 +79,15 @@
 
   	&__full{
 	  	position: absolute;
-	  	top: 0; left: -9999px;
 	  	opacity: 0;
+	  	top: 0; left: -9999px;
 		border-radius: 5px;
 		background-color: rgba(255, 255, 255, .9);
 		font-family: 'Ubuntu_Medium';
 		color: rgb(47, 50, 52);
 		width: 270px;
 		padding: 9px 21px;
+		transition: opacity 0.2s ease-out;
 
 		&::after{
 			content: '';
@@ -97,16 +105,13 @@
 	&:hover .composition__full{
 		left: $composition_link_size;
 		opacity: 1;
-		transition: opacity 0.3 ease-in;
 	}
 
 
 	&__product{ //строка таблицы
 
 		&pic{//картинка продукта в таблице
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center center;
+			@extend %bgImg;
     		height: 48px;
 			width: 50px;
 		}
@@ -127,12 +132,12 @@
 }
 
 
-.our_burgers__price{
+.burgers_slider__price{
 	color: $deep-orange-color;
 	line-height: 1;
 }
 
-.our_burgers__currencyprice{
+.burgers_slider__currencyprice{
 	display: inline-block;
 	vertical-align: bottom;
 	font-size: 30px;
@@ -140,7 +145,7 @@
 	margin-right: 20px;
 }
 
-.our_burgers__numericprice{
+.burgers_slider__numericprice{
 	display: inline-block;
 	vertical-align: bottom;
 	font-size: 72px;	
@@ -162,9 +167,7 @@
 	&__picture{
 		height: 60px;
 		background-image: url('../img/icons/kkal.svg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		@extend %bgImg;
 	}
 
 	&__numeric{
@@ -180,7 +183,52 @@
 }
 
 
-.our_burgers__title{
+.burgers_slider__title{
 	line-height: 0.9;
 	margin: 5px 0 40px;
+}
+
+
+.arrow{
+
+	&-burgersliderright{
+		right: -20px;
+		top: 50%;
+		transform: translateY(-50%) rotate(-90deg);
+	}
+
+	&-burgersliderleft{
+		left: -20px;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+	}
+
+	&.arrow-burgersliderright:hover &__pic,
+	&.arrow-burgersliderleft:hover &__pic{
+		transform: translateY(-20%);
+	}
+
+	&__pic{
+		height: 15px;
+		width: 30px;
+		transition: transform 0.2s linear;
+	}
+
+}
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+}
+
+
+.jcarousel li {
+    float: left;
+    width: 940px;
 }

@@ -39,7 +39,10 @@
 	}
 
 	&-lessmarginbottom{
-		margin-bottom: 2px;
+		margin-bottom: 6px;
+	}
+	&-anothermarginbottom{
+		margin-bottom: 12px;
 	}
 }
 
@@ -53,13 +56,6 @@
 			width: calc( (100% - #{$margin_between_inputs}*(#{$quantity} - 1) )/#{$quantity});
 		}
 	}
-	// &-2{
-	// 	width: calc( (100% - #{$margin_between_inputs}*(2 - 1) )/2);
-	// }
-
-	// &-4{
-	// 	width: calc( (100% - #{$margin_between_inputs}*(4 - 1) )/4);
-	// }		
 
 	&text{//текст над инпутом
 		margin-bottom: 10px;
@@ -67,8 +63,7 @@
 		&-shift{
 			padding-left: 25px;
 			position: relative;
-
-
+			
 			&::before{
 				content: '';
 				width: 16px;
@@ -78,15 +73,21 @@
 				left: 0;
 				background-color: #fff;
 				border: 4px solid #fff;
+				transition: background-color 0.3s linear, border-width 0.2s linear;
 			}
 
 			&.formorder__itemtext-round{
 				&::before{
 					border-radius: 50%;
-
 				}
-			}			
+			}	
 
+			&.formorder__itemtext-square{
+				&::before{
+				background-image: url('../img/icons/check.svg');
+				@extend %bgImg;
+				border-width: 8px;				}
+			}			
 
 		}
 	}
@@ -110,11 +111,18 @@
 		background-color: $deep-orange-color;
 	}
 	&:checked + .formorder__itemtext-shift.formorder__itemtext-square::before{
-		background-image: url('../img/icons/check.svg');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
+		border-width: 3px;
 	}
 }
 
-
+.button-clean .button__link{
+	text-transform: none;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	
+	&:hover{
+		background-color: transparent;			
+	}	
+}

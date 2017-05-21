@@ -34,15 +34,14 @@ body{
 }
 
 .section{
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	@extend %bgImg;
 	height: 100vh; min-height: 650px;
 }
 .section__container{
 	height: 100%;
 	max-width: $static_width;
 	margin: 0 auto;
+	position: relative;
 }
 
 .section__title{
@@ -76,8 +75,24 @@ body{
 	background-color: $deep-orange-color;
 	border-radius: 5px;
 	padding: 10px 15px;
-
+	transition: background-color 0.2s ease-in;
+	
 	&:hover{
 		background-color: rgba(228, 80, 40, 0.9);			
 	}	
+}
+
+.arrow{	
+	@extend %inline-vertical-centr;
+	position: absolute;
+	height: 40px;
+	width: 40px;	
+	z-index: 900;
+
+	&__pic{
+		@extend %inline-vertical-centr-child;
+		margin: 0 auto;
+		background-image: url('../img/icons/arrow-scroll.svg');
+		@extend %bgImg;
+	}
 }

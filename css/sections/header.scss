@@ -1,14 +1,14 @@
 .header{
 	@extend %inline-vertical-centr;
+	@include inlinefix;
 	width: $static_width;
-	//background-color: rgba(0,0,0,.5);
 	position: absolute;
 	top: 0;
 	padding: 12px 0;
 	z-index: 100;
 	max-height: 200px;
 	overflow: hidden;
-	@include inlinefix;
+	
 }
 
 
@@ -20,9 +20,7 @@
 .logo{
 	height: 70px;
 	width: 90px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	@extend %bgImg;
 
 	&__picture{
 		display: none;

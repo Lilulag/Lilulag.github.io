@@ -204,38 +204,77 @@
 </svg> -->
 
 	<div class="wrapper">
+			<div class="navigation">
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a href="#" class="navigation__button"></a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__button"></a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__button"></a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__button"></a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__button"></a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__button"></a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__button"></a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__button"></a>
+					</li>					
+				</ul>
+			</div>
 			<section class="section section-firstscreen" id="firstscreen">
-				<div class="section__container">
-					<header class="header">
-						<!-- <div class="container"> -->
-							<div class="header__left">
-								<div class="logo" style="background-image: url('img/icons/logo.svg');">
-									<img src="" alt="Logotype" class="logo__picture">
+				<div class="is_overlay">
+					<video autoplay="autoplay"> <!-- loop="loop">  -->
+						<source src="../Burgers/img/bg/burger_video.mp4" type="video/mp4">
+						<!-- <source src="/videos/WD0221.webmsd.webm" type="video/webm"> -->
+					</video>
+					<div class="section__container">
+						<header class="header">
+							<!-- <div class="container"> -->
+								<div class="header__left">
+									<div class="logo" style="background-image: url('img/icons/logo.svg');">
+										<img src="" alt="Logotype" class="logo__picture">
+									</div>
 								</div>
+								<div class="header__right">
+									<ul class="mainmenu">
+										<li class="mainmenu__item"><a href="#firstscreen" class="mainmenu__link">О нас</a></li>
+										<li class="mainmenu__item"><a href="#we" class="mainmenu__link">Бургеры</a></li>
+										<li class="mainmenu__item"><a href="#burgers" class="mainmenu__link">Команда</a></li>
+										<li class="mainmenu__item"><a href="#team" class="mainmenu__link">Меню</a></li>
+										<li class="mainmenu__item"><a href="#menu" class="mainmenu__link">Отзывы</a></li>
+										<li class="mainmenu__item"><a href="#reviews" class="mainmenu__link">Контакты</a></li>
+									</ul>
+									<div class="button button-makeorder">
+										<a href="#form" class="button__link">Заказать</a>
+									</div>						
+								</div>
+							<!-- </div> -->
+						</header>
+						<div class="wemake">
+							<div class="wemake__picture">
+								<img src="img/content/firstscreen_burger.png" alt="we make burgers" class="wemake__img">
 							</div>
-							<div class="header__right">
-								<ul class="mainmenu">
-									<li class="mainmenu__item"><a href="#firstscreen" class="mainmenu__link">О нас</a></li>
-									<li class="mainmenu__item"><a href="#we" class="mainmenu__link">Бургеры</a></li>
-									<li class="mainmenu__item"><a href="#burgers" class="mainmenu__link">Команда</a></li>
-									<li class="mainmenu__item"><a href="#team" class="mainmenu__link">Меню</a></li>
-									<li class="mainmenu__item"><a href="#menu" class="mainmenu__link">Отзывы</a></li>
-									<li class="mainmenu__item"><a href="#reviews" class="mainmenu__link">Контакты</a></li>
-								</ul>
-								<div class="button button-makeorder">
-									<a href="#form" class="button__link">Заказать</a>
-								</div>						
+							<div class="wemake__desc">
+								<h2 class="wemake__title section__title">Мы делаем</h2>
+								<p class="wemake__text">натуральные бургеры</p>
 							</div>
-						<!-- </div> -->
-					</header>
-					<div class="wemake">
-						<div class="wemake__picture">
-							<img src="img/content/firstscreen_burger.png" alt="we make burgers" class="wemake__img">
 						</div>
-						<div class="wemake__desc">
-							<h2 class="wemake__title section__title">Мы делаем</h2>
-							<p class="wemake__text">натуральные бургеры</p>
-						</div>
+						<a href="#" class="arrow arrow-firstscreen">
+							<span class="arrow__pic">
+								
+							</span>
+						</a>
 					</div>
 				</div>
 			</section>			
@@ -271,114 +310,237 @@
 			</section>			
 			<section class="section section-burgers" id="burgers">
 				<div class="section__container">
-					<div class="our_burgers">
-						<div class="our_burgers__info">
-							<div class="composition">
-								<a href="#" class="composition__link">
-									<div class="composition__picture">
-										
+
+					<div class="jcarousel">
+						<ul class="burgers_slider">
+						<li class="burgers_slider__item"> <!-- active"> потом буду писать свой-->
+							<div class="burgers_slider__info">
+								<div class="composition">
+									<a href="#" class="composition__link">
+										<div class="composition__picture">
+											
+										</div>
+										<span class="composition__text">Состав</span>
+									</a>
+									<div class="composition__full">
+										<table class="composition__fulltable">
+											<tbody class="composition__listproducts">
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/beef.svg" alt="product">
+													<td class="composition__tablecell">
+														<div class="composition__productname">Говядина</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">300 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/buns.svg" alt="product">							
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Булочки</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">100 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/salad.svg" alt="product">
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Зелень</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">70 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/sauce.svg" alt="product">
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Соус</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">150 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/cucumber.svg" alt="product">
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Овощи</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">200 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/cheese.svg" alt="product">
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Сыр</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">80 г.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
-									<span class="composition__text">Состав</span>
-								</a>
-								<div class="composition__full">
-									<table class="composition__fulltable">
-										<tbody class="composition__listproducts">
-											<tr class="composition__product">
-												<td class="composition__tablecell">
-													<img class="composition__productpic" src="img/icons/beef.svg" alt="product">
-												<td class="composition__tablecell">
-													<div class="composition__productname">Говядина</div>
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productgramm">300 г.</div>
-												</td>
-											</tr>
-											<tr class="composition__product">
-												<td class="composition__tablecell">
-													<img class="composition__productpic" src="img/icons/buns.svg" alt="product">							
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productname">Булочки</div>
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productgramm">100 г.</div>
-												</td>
-											</tr>
-											<tr class="composition__product">
-												<td class="composition__tablecell">
-													<img class="composition__productpic" src="img/icons/salad.svg" alt="product">
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productname">Зелень</div>
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productgramm">70 г.</div>
-												</td>
-											</tr>
-											<tr class="composition__product">
-												<td class="composition__tablecell">
-													<img class="composition__productpic" src="img/icons/sauce.svg" alt="product">
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productname">Соус</div>
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productgramm">150 г.</div>
-												</td>
-											</tr>
-											<tr class="composition__product">
-												<td class="composition__tablecell">
-													<img class="composition__productpic" src="img/icons/cucumber.svg" alt="product">
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productname">Овощи</div>
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productgramm">200 г.</div>
-												</td>
-											</tr>
-											<tr class="composition__product">
-												<td class="composition__tablecell">
-													<img class="composition__productpic" src="img/icons/cheese.svg" alt="product">
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productname">Сыр</div>
-												</td>
-												<td class="composition__tablecell">
-													<div class="composition__productgramm">80 г.</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+								</div>
+								<div class="burgers_slider__picture">
+									<img src="img/content/dark_burger.png" alt="dark burger" class="burgers_slider__img">
+								</div>
+								<div class="FAT">
+									<svg class="FAT__picturesvg" x="0px" y="0px" width="60px" height="60.178px" viewBox="0 0 60 60.178" enable-background="new 0 0 60 60.178" xml:space="preserve">
+										<use xlink:href="#kkal" x="0" y="0"/> 			
+										<use xlink:href="img/icons/allsvgs.svg#kkal" x="0" y="0"/> 
+									</svg>
+									
+									<!-- div class="FAT__picture">										
+									</div>		 -->
+									<div class="FAT__numeric">1200</div>
+									<div class="FAT__kkal">ккал</div>						
 								</div>
 							</div>
-							<div class="our_burgers__picture">
-								<img src="img/content/dark_burger.png" alt="dark burger" class="our_burgers__img">
+							<div class="burgers_slider__desc">
+								<h2 class="burgers_slider__title section__title">Dark beef burger</h2>
+								<p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+								<div class="burgers_slider__price">
+									<div class="burgers_slider__numericprice">500</div>
+									<div class="burgers_slider__currencyprice">рублей</div>	
+										<div class="button button-makeorder">
+											<a href="#form" class="button__link">Заказать</a>
+										</div>								
+								</div>
 							</div>
-							<div class="FAT">
-								<svg class="FAT__picturesvg" x="0px" y="0px" width="60px" height="60.178px" viewBox="0 0 60 60.178" enable-background="new 0 0 60 60.178" xml:space="preserve">
-									<use xlink:href="#kkal" x="0" y="0"/> 			
-									<use xlink:href="img/icons/allsvgs.svg#kkal" x="0" y="0"/> 
-								</svg>
-								
-								<!-- div class="FAT__picture">										
-								</div>		 -->
-								<div class="FAT__numeric">1200</div>
-								<div class="FAT__kkal">ккал</div>						
+						</li>
+						<li class="burgers_slider__item">
+							<div class="burgers_slider__info">
+								<div class="composition">
+									<a href="#" class="composition__link">
+										<div class="composition__picture">
+											
+										</div>
+										<span class="composition__text">Состав</span>
+									</a>
+									<div class="composition__full">
+										<table class="composition__fulltable">
+											<tbody class="composition__listproducts">
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/beef.svg" alt="product">
+													<td class="composition__tablecell">
+														<div class="composition__productname">Говядина</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">300 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/buns.svg" alt="product">							
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Булочки</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">100 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/salad.svg" alt="product">
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Зелень</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">70 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/sauce.svg" alt="product">
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Соус</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">150 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/cucumber.svg" alt="product">
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Овощи</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">200 г.</div>
+													</td>
+												</tr>
+												<tr class="composition__product">
+													<td class="composition__tablecell">
+														<img class="composition__productpic" src="img/icons/cheese.svg" alt="product">
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productname">Сыр</div>
+													</td>
+													<td class="composition__tablecell">
+														<div class="composition__productgramm">80 г.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="burgers_slider__picture">
+									<img src="img/content/dark_burger.png" alt="dark burger" class="burgers_slider__img">
+								</div>
+								<div class="FAT">
+									<svg class="FAT__picturesvg" x="0px" y="0px" width="60px" height="60.178px" viewBox="0 0 60 60.178" enable-background="new 0 0 60 60.178" xml:space="preserve">
+										<use xlink:href="#kkal" x="0" y="0"/> 			
+										<use xlink:href="img/icons/allsvgs.svg#kkal" x="0" y="0"/> 
+									</svg>
+									
+									<!-- div class="FAT__picture">										
+									</div>		 -->
+									<div class="FAT__numeric">1200</div>
+									<div class="FAT__kkal">ккал</div>						
+								</div>
 							</div>
-						</div>
-						<div class="our_burgers__desc">
-							<h2 class="our_burgers__title section__title">Dark beef burger</h2>
-							<p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
-							<div class="our_burgers__price">
-								<div class="our_burgers__numericprice">500</div>
-								<div class="our_burgers__currencyprice">рублей</div>	
-									<div class="button button-makeorder">
-										<a href="#form" class="button__link">Заказать</a>
-									</div>								
+							<div class="burgers_slider__desc">
+								<h2 class="burgers_slider__title section__title">Dark beef burger</h2>
+								<p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+								<div class="burgers_slider__price">
+									<div class="burgers_slider__numericprice">500</div>
+									<div class="burgers_slider__currencyprice">рублей</div>	
+										<div class="button button-makeorder">
+											<a href="#form" class="button__link">Заказать</a>
+										</div>								
+								</div>
 							</div>
-						</div>
+						</li>
+						</ul>					
 					</div>
+					<a class="arrow arrow-burgersliderleft jcarousel-prev">
+						<span class="arrow__pic">
+							
+						</span>
+					</a>					
+					<a class="arrow arrow-burgersliderright jcarousel-next">
+						<span class="arrow__pic">
+							
+						</span>
+					</a>
 				</div>				
 			</section>			
 			<section class="section section-team" id="team">
@@ -639,7 +801,7 @@
 										<textarea class="formorder__input formorder__input-textarea" name=""></textarea>
 									</label>
 								</div>
-								<div class="formorder__row">
+								<div class="formorder__row formorder__row-anothermarginbottom">
 									<label class="formorder__item formorder__item-2">
 										<input type="radio" name="moneyinfo" class="formorder__payment formorder__payment-change">
 										<div class="formorder__itemtext formorder__itemtext-shift  formorder__itemtext-round">Потребуется сдача</div>
@@ -655,9 +817,11 @@
 										<div class="formorder__itemtext formorder__itemtext-shift formorder__itemtext-square">Не перезванивать</div>
 									</label>
 								</div>
-
 								<div class="button button-makeorder">
 									<a href="#" class="button__link">Заказать</a>
+								</div>	
+								<div class="button button-clean">
+									<button type="reset" class="button__link">Очистить</button>
 								</div>		
 							</div>
 
@@ -713,6 +877,8 @@
 			</section>
 	</div>
 <script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+
 <script src="js/main.js"></script>
 </body>
 </html>

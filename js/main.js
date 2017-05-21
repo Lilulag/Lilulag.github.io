@@ -1,41 +1,89 @@
 $(document).ready(function(){
 
-	$('.ourteam__item').on('click', function(){
+			// аккордеон в team начало
+	(function(){
+		$('.ourteam__item').on('click', function(){
 
-		if ($(this).hasClass('active'))
-			{
-				$(this).children('.ourteam__info').slideUp(300);
-				$(this).removeClass('active');
-			}
-		else
-			{
-				var prevActive = $('.ourteam__item.active');
-				prevActive.children('.ourteam__info').slideUp(300);
-				prevActive.removeClass('active');
+			if ($(this).hasClass('active'))
+				{
+					$(this).children('.ourteam__info').slideUp(300);
+					$(this).removeClass('active');
+				}
+			else
+				{
+					var prevActive = $('.ourteam__item.active');
+					prevActive.children('.ourteam__info').slideUp(300);
+					prevActive.removeClass('active');
 
-				$(this).children('.ourteam__info').slideDown(300); 
-				$(this).addClass('active');
-			}
-	})
+					$(this).children('.ourteam__info').slideDown(300); 
+					$(this).addClass('active');
+				}
+		})
+	})();	// аккордеон в team окончание
 
-	$('.ourmenu__item').on('click', function(e){
+	
+			// аккордеон в meni начало	
+	(function(){
+		$('.ourmenu__item').on('click', function(e){
 
-		e.preventDefault();
+			e.preventDefault();
 
-		//$('.ourmenu__fulldesc').css('display','none');
+			if ($(this).hasClass('active'))
+				{
+					$(this).removeClass('active');
+				}
+			else
+				{
+					var prevActive = $('.ourmenu__item.active');
+					prevActive.removeClass('active');
 
-		if ($(this).hasClass('active'))
-			{
-				$(this).removeClass('active');
-			}
-		else
-			{
-				var prevActive = $('.ourmenu__item.active');
-				prevActive.removeClass('active');
+					$(this).addClass('active');
+				}
+		})
+	})();	// аккордеон в menu окончание
+	
+			// слайдер burger начало	
+	// ($('.arrow').on('click', function(e){
 
-				$(this).addClass('active');
-			}
-	})
+	// 	e.preventDefault();
+	// 	console.log('prevent');
+
+		
+	// }))();	// слайдер burger окончание
+
+	//временно карусель сторонним плагином
+	(function(){
+		$(function() {
+			var carousel = $('.jcarousel').jcarousel({
+	    		list: '.burgers_slider',
+	        	items: '.burgers_slider__item', 
+	        	animation: 'slow',
+	        	transitions: true,
+	        	wrap: 'circular', 
+
+			});
+
+			
+	    	$('.jcarousel-prev').jcarouselControl({
+	        	target: '-=1',
+	        	carousel: carousel
+	    	});
+
+	    	$('.jcarousel-next').jcarouselControl({
+	        	target: '+=1',
+	        	carousel: carousel
+	    	});
+
+		});//временно карусель сторонним плагином окончание
+	})();	
+
+			//	скрываем видео по завершению начало
+	(function(){
+		$('.is_overlay video').delay(22000).animate(
+  			{
+   				opacity: "0"
+  			}, 2500);
+	})();	//  скрываем видео по завершению  окончание
 
 
 })
