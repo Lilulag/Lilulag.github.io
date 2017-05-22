@@ -34,6 +34,11 @@
 
 .ourteam__item{
 	margin-bottom: 35px;
+
+	&.active .ourteam__name::before{
+		border-top: none;
+		border-bottom: 6px solid $orange-color;
+	}
 }
 
 .ourteam__name{
@@ -56,12 +61,9 @@
 
 	&:hover{
 		color: $orange-color;
-
-		&:before{
-			border-top: none;
-			border-bottom: 6px solid $orange-color;
-		}
 	}
+
+	
 }
 
 .ourteam__info{

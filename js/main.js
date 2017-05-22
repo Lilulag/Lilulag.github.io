@@ -42,14 +42,16 @@ $(document).ready(function(){
 		})
 	})();	// аккордеон в menu окончание
 	
+
 			// слайдер burger начало	
-	// ($('.arrow').on('click', function(e){
+	// $('.arrow').on('click', function(e){
 
 	// 	e.preventDefault();
 	// 	console.log('prevent');
 
 		
-	// }))();	// слайдер burger окончание
+	// });	// слайдер burger окончание
+
 
 	//временно карусель сторонним плагином
 	(function(){
@@ -59,8 +61,7 @@ $(document).ready(function(){
 	        	items: '.burgers_slider__item', 
 	        	animation: 'slow',
 	        	transitions: true,
-	        	wrap: 'circular', 
-
+	        	wrap: 'circular' 
 			});
 
 			
@@ -85,6 +86,39 @@ $(document).ready(function(){
   			}, 2500);
 	})();	//  скрываем видео по завершению  окончание
 
+
+	(function(){
+	  	$(window).scroll(function() {
+		    var wScrollTop = $(window).scrollTop();//прокручено от верхней границы
+
+		    $(".section").each(function() {
+		      var $this = $(this);
+		      var windowMargin = 200; 
+		      var sectionPos = $this.offset().top - windowMargin; //расстояние от верхней границы окна до секции - 100px
+		      var sectionBottom = sectionPos + $this.height();
+
+		      //console.log('wScrollTop ' + wScrollTop + ' offset().top ' + $this.offset().top);
+
+		      if (wScrollTop > sectionPos && wScrollTop < sectionBottom) {
+
+		        var id = '#' + $this.attr('id');
+		        var AllSecLinks = $('.mainmenu__link');
+
+		        var ActiveLink = AllSecLinks.filter(function() {
+		        	//console.log( typeof $(this).attr('href') + typeof id);
+		          return $(this).attr('href') == id;
+		        });
+
+//console.log(ActiveLink.attr('href'));
+
+		        AllSecLinks.removeClass('active');
+		        ActiveLink.addClass('active');
+		      }
+
+		    });		//each окончание
+	  	});			//scroll окончание
+
+	})();
 
 })
 
