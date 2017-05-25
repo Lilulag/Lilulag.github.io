@@ -765,7 +765,9 @@ body {
     float: right; }
     .burgers_slider__desc p {
       line-height: 1.7;
-      margin-bottom: 22px; }
+      margin-bottom: 22px;
+      height: 110px;
+      overflow: hidden; }
 
 .composition {
   position: absolute;
@@ -1117,6 +1119,7 @@ body {
       line-height: 1.7; }
   .review__full {
     color: #2f3234;
+    border-radius: 5px;
     display: none;
     width: 460px;
     max-height: 500px;
