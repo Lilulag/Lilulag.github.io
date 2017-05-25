@@ -87,6 +87,7 @@ $(document).ready(function(){
 
 		var secContainer = $('.allcontent');
 	  	var allSections = $('.section');
+	  	var allRoundNavLinks = $('.navigation__item .navigation__button');
 	  	var touchMultiScroll = false;
 	  	//тут присвоить href
  
@@ -150,7 +151,9 @@ $(document).ready(function(){
 
 	  	//});			//scroll окончание
 
-
+	  	var toggleActiveClass = function(elems, number){
+	  		elems.removeClass('active').eq(number).addClass('active');
+	  	}
 
 	  	var scrolligPage = function (sectionNumber){
 	  		var pos = (-100 * sectionNumber) + '%';
@@ -163,7 +166,11 @@ $(document).ready(function(){
 		  			'transform': 'translateY('+ pos + ')'
 		  			});
 
-		  		allSections.eq(sectionNumber).addClass('active').siblings().removeClass('active');
+		  		toggleActiveClass(allSections, sectionNumber);
+		  		toggleActiveClass(allRoundNavLinks, sectionNumber);
+
+		  		// allSections.eq(sectionNumber).addClass('active').siblings().removeClass('active');
+		  		// allRoundNavLinks.eq(sectionNumber).addClass('active').siblings().removeClass('active');
 
 		  		if (allSections.eq(sectionNumber + 1).length > 0){//если секция не последняя
 		  			var nextSectionName = '#'+ allSections.eq(sectionNumber + 1).attr('id');

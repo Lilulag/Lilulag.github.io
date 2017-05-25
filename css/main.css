@@ -569,7 +569,7 @@ body {
     opacity: 0;
     -webkit-transition: opacity 0.2s linear;
             transition: opacity 0.2s linear; }
-  .navigation__button:hover::after {
+  .navigation__button:hover::after, .navigation__button.active::after {
     border: 1px solid #fff;
     opacity: 1; }
 
