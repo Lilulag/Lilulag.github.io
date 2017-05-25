@@ -8,11 +8,11 @@
 
 .container{ 
 	@extend %inline-vertical-centr;
+	@include inlinefix;
 	margin: 0 auto;
 	width: 940px;
 	max-height: 200px;
-	overflow: hidden;
-	@include inlinefix;
+	overflow: hidden;	
 }
 
 .footer__left{

@@ -59,30 +59,3 @@ $static_width: 940px;
 	overflow: hidden;
 }
 
-
-// adaptive
-
-// Ноутбук
-// Ширина экрана - 992px
-// Ширина контейнера - 750px
-@mixin laptop {
-	@media screen and (max-width: 992px) {
- 	 			@content; 
- 	}
-}
-// Планшет
-// Ширина экрана - 768px
-// Ширина контейнера - 480px
-@mixin tablet {
-	@media screen and (max-width: 768px) {
- 	 			@content; 
- 	}
-}
-// Телефон
-// Ширина экрана - 480px и меньше
-// Ширина контейнера - 95%
-@mixin phone {
-	@media screen and (max-width: 480px) {
- 	 			@content; 
- 	}
-}

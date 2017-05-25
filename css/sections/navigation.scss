@@ -1,6 +1,7 @@
 $nav_item_size: 16px;
 .navigation{
 	@extend %inline-vertical-centr;
+	@include inlinefix;
 	position: fixed;
 	top: 10px;
 	right: 10px;

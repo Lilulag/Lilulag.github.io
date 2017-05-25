@@ -33,40 +33,28 @@
 		}	
 	}
 
-	
-	// &-meetlovers{
-	// 	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/meetlovers.png');
-	// }
-	// &-vegetarians{
-	// 	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/vegetarians.png');		
-	// }
-	// &-dietaries{
-	// 	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../img/content/dietaries.png');
-	// }
-
-
 	&.active .ourmenu__fulldesc{
 		display: inline-block;
 	}
 	
 	&.active{
-		animation: rightAccordeon 0.3s ease-out;
+		//animation: rightAccordeon 0.3s ease-out;
 	}
 	
 }
 
 
-@keyframes rightAccordeon{
-  0% {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
+// @keyframes rightAccordeon{
+//   0% {
+//     opacity: 0;
+//     transform: translate3d(100%, 0, 0);
+//   }
 
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
+//   100% {
+//     opacity: 1;
+//     transform: none;
+//   }
+// }
 
 
 .ourmenu__link{

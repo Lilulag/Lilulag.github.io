@@ -23,23 +23,24 @@ $(document).ready(function(){
 	//	аккордеон в team окончание
 
 	
-	//	аккордеон в meni начало	
+	//	аккордеон в menu начало	
 	(function(){
+		
 		$('.ourmenu__item').on('click', function(e){
 
 			e.preventDefault();
 
-			if ($(this).hasClass('active'))
-				{
-					$(this).removeClass('active');
-				}
-			else
-				{
-					var prevActive = $('.ourmenu__item.active');
-					prevActive.removeClass('active');
+			// if ($(this).hasClass('active'))
+			// 	{
+			// 		$(this).removeClass('active');
+			// 	}
+			// else
+			// 	{
+			// 		var prevActive = $('.ourmenu__item.active');
+			// 		prevActive.removeClass('active');
 
-					$(this).addClass('active');
-				}
+			// 		$(this).addClass('active');
+			// 	}
 		})
 	})();	
 	//	аккордеон в menu окончание
@@ -82,7 +83,7 @@ $(document).ready(function(){
 	//	скрываем видео по завершению  окончание
 
 
-	//OPS начало
+	//	OPS начало
 	(function(){
 
 		var secContainer = $('.allcontent');
@@ -97,22 +98,9 @@ $(document).ready(function(){
 		    var $this = $(this);
 		    var href = $this.attr('href');
 		    var SectionNum = allSections.filter(href).index();
-			// var nextSectionName = '#'+ allSections.eq(SectionNum + 1).attr('id');
-
-			// if ($this.hasClass('arrow-totop') ){
-			// 	$('.arrow-totop').hide(300);
-			// };
 
 		    scrolligPage(SectionNum);
-
 		    
-			// if ($this.hasClass('arrow-gonextsection')){			 	
-			//  	//console.dir('nextSectionNane '+nextSectionName);
-			//  	$this.attr('href', nextSectionName);
-			// }
-			// else{
-				
-			//}
 		 //    var SectionTop = allSections.filter(href).offset().top;
 			// //var SectionTop = AllSections.filter(href).offset().top;
 
@@ -221,25 +209,36 @@ $(document).ready(function(){
 		})		//key окончание
 
 	})();
-	//OPS окончание	
+	//	OPS окончание	
 
-})
+	//	popup начало
+	$(function(){
+
+		$('.button__link-showreview').fancybox({
+				type: 'inline',
+				maxWidth: 460,
+				fitToView: false,
+				padding: 0
+			});	
+
+		$('.review__closefull').on('click', function(){
+			$.fancybox.close(  );//all
+		});
+
+	})
+	//	popup окончание
+
+	//	mask начало
+	$(function(){
+
+		$('.formorder__input-phone').inputmask('+7(999)9999999'); 
+
+	})
+	//	mask окончание
+
+})//ready end
 
 
-//popup
-$(function(){
 
-	$('.button__link-showreview').fancybox({
-			type: 'inline',
-			maxWidth: 460,
-			fitToView: false,
-			padding: 0
-		});	
-
-	$('.review__closefull').on('click', function(){
-		$.fancybox.close(  );//all
-	});
-
-})
 
 
