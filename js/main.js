@@ -25,23 +25,44 @@ $(document).ready(function(){
 	
 	//	аккордеон в menu начало	
 	(function(){
-		
-		$('.ourmenu__item').on('click', function(e){
+			var activeItem = $('.ourmenu__item.active');;
 
+			var noActiveWidth0 = function(obj){
+				console.log('tuta');
+				obj.stop(true).animate(
+	  			{
+	   				width: '80px'
+	  			}, 	800,
+	  			function(){
+	  				obj.removeClass('active')
+	  			});				
+			};
+
+			$('.ourmenu__item').on('click', function(e){
+			var $this = $(this);
+			
 			e.preventDefault();
 
-			// if ($(this).hasClass('active'))
-			// 	{
-			// 		$(this).removeClass('active');
-			// 	}
-			// else
-			// 	{
-			// 		var prevActive = $('.ourmenu__item.active');
-			// 		prevActive.removeClass('active');
+			if ($this.hasClass('active'))
+				{
+					noActiveWidth0($this);
+				}
+			else
+				{
+					activeItem.length && noActiveWidth0(activeItem);
+					$this.addClass('active').stop(true).animate({
+						width: '620px'
+					})
+				}
 
-			// 		$(this).addClass('active');
-			// 	}
+			activeItem = $('.ourmenu__item.active');
 		})
+
+			//прячем открытое меню по клику не на него начало
+		$('.wrapper').on('click', function(e){
+			activeItem.length && !($(e.target).closest('.ourmenu__list').length) && noActiveWidth0(activeItem);
+		})	//прячем открытое меню по клику не на него окончание
+
 	})();	
 	//	аккордеон в menu окончание
 	

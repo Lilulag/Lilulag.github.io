@@ -25,6 +25,8 @@
 	height: 100%;
 	min-width: 80px;
 	float: left;
+	position: relative;
+    right: 0px;
 	@extend %bgImg;
 
 	@each $type_menu in meetlovers, vegetarians, dietaries{
@@ -37,24 +39,11 @@
 		display: inline-block;
 	}
 	
-	&.active{
-		//animation: rightAccordeon 0.3s ease-out;
+	&.active .ourmenu__text, .ourmenu__text:hover{
+		color: $orange-color;
 	}
 	
 }
-
-
-// @keyframes rightAccordeon{
-//   0% {
-//     opacity: 0;
-//     transform: translate3d(100%, 0, 0);
-//   }
-
-//   100% {
-//     opacity: 1;
-//     transform: none;
-//   }
-// }
 
 
 .ourmenu__link{
@@ -65,11 +54,11 @@
 }
 
 .ourmenu__fulldesc{
-	display: inline-block;
 	width: 540px;
 	height: 100%;
 	background-color: rgba(47, 50, 52, .9);
 	vertical-align: top;
+	position: absolute;
 	display: none;
 }
 
