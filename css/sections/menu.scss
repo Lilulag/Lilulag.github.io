@@ -9,7 +9,9 @@
 }
 
 .ourmenu__title{
-	padding: 110px 0 0 15px;
+	position: absolute;
+	top: 5%;left: 10%;
+	// padding: 110px 0 0 15px;
 }
 
 .ourmenu__list{
@@ -41,8 +43,7 @@
 	
 	&.active .ourmenu__text, .ourmenu__text:hover{
 		color: $orange-color;
-	}
-	
+	}	
 }
 
 
@@ -87,7 +88,6 @@
     min-width: 650px;
 	height: 80px; 
 	line-height: 60px; //80 - паддинги верх и низ по 10px
-	
 	text-align: center;
 	position: absolute;	
 	top: 100%;	

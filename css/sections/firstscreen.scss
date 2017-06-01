@@ -1,20 +1,5 @@
 .section-firstscreen{
 	background-image: url('../img/bg/firstscreen.png');
-	// position: relative;
-
-	// &::after{
-		// content: url('../img/icons/arrow-scroll.svg');
-		// position: absolute;
-		// cursor: pointer;
-		// bottom: 40px;
-		// left: 50%;
-		// transform: translateX(-50%);
-		// transition: transform 0.3s linear;
-
-		// &:hover{
-		// 	transform: translateY(-15%);
-		// }
-	// }
 }
 
 .is_overlay{
@@ -74,25 +59,3 @@
     line-height: 1;
     font-family: 'Lifehack';	
 }
-
-
-// .arrow{
-
-// 	&-firstscreen{
-// 		bottom: 40px;
-// 		left: 50%;
-// 		transform: translateX(-50%);
-
-// 	}
-
-// 	&.arrow-firstscreen:hover &__pic{
-// 		transform: translateY(-100%);
-// 	}
-
-// 	&__pic{
-// 		height: 15px;
-// 		width: 30px;
-// 		transition: transform 0.3s linear;
-// 	}
-
-// }

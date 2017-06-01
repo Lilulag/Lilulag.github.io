@@ -1,31 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta name="viewport" content="width=960">
+  	<meta name="description" content="The Best Burgers">
+	<meta name="keywords" content="burger, fastfood, yammy">
+	<meta name="author" content="Lidia">
 	<title>Burgers</title>
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
 
-<!-- <svg> 
-
-	<g id="kkal">		
-	</g>
-
-	<g id="vk">		
-	</g>
-
-	<path id="fb" d=""/>
-
-	<path id="inst" d=""/>
-
-	<path id="tw" d=""/>
-
-</svg> -->
-
 	<div class="wrapper">	
-
 		<div class="allcontent">
 			<section class="section section-firstscreen active" id="firstscreen">
 				<div class="is_overlay">
@@ -35,10 +24,9 @@
 					</video>
 					<div class="section__container">
 						<header class="header">
-							<!-- <div class="container"> -->
 								<div class="header__left">
-									<div class="logo" style="background-image: url('img/icons/logo.svg');">
-										<img src="" alt="Logotype" class="logo__picture">
+									<div class="logo">
+										<img src="img/icons/logo.svg" alt="Logotype" class="logo__picture">
 									</div>
 								</div>
 								<div class="header__right">
@@ -54,7 +42,6 @@
 										<a href="#form" class="button__link">Заказать</a>
 									</div>						
 								</div>
-							<!-- </div> -->
 						</header>
 						<div class="wemake">
 							<div class="wemake__picture">
@@ -103,7 +90,7 @@
 
 					<div class="jcarousel">
 						<ul class="burgers_slider">
-						<li class="burgers_slider__item"> <!-- active"> потом буду писать свой-->
+						<li class="burgers_slider__item"> 
 							<div class="burgers_slider__info">
 								<div class="composition">
 									<a href="#" class="composition__link">
@@ -189,12 +176,8 @@
 								</div>
 								<div class="FAT">
 									<svg class="FAT__picturesvg" x="0px" y="0px" width="60px" height="60.178px" viewBox="0 0 60 60.178" enable-background="new 0 0 60 60.178" xml:space="preserve">
-										<use xlink:href="#kkal" x="0" y="0"/> 			
 										<use xlink:href="img/icons/allsvgs.svg#kkal" x="0" y="0"/> 
 									</svg>
-									
-									<!-- div class="FAT__picture">										
-									</div>		 -->
 									<div class="FAT__numeric">1200</div>
 									<div class="FAT__kkal">ккал</div>						
 								</div>
@@ -215,8 +198,7 @@
 							<div class="burgers_slider__info">
 								<div class="composition">
 									<a href="#" class="composition__link">
-										<div class="composition__picture">
-											
+										<div class="composition__picture">						
 										</div>
 										<span class="composition__text">Состав</span>
 									</a>
@@ -296,13 +278,9 @@
 									<img src="img/content/dark_burger.png" alt="dark burger" class="burgers_slider__img">
 								</div>
 								<div class="FAT">
-									<svg class="FAT__picturesvg" x="0px" y="0px" width="60px" height="60.178px" viewBox="0 0 60 60.178" enable-background="new 0 0 60 60.178" xml:space="preserve">
-										<use xlink:href="#kkal" x="0" y="0"/> 			
+									<svg class="FAT__picturesvg" x="0px" y="0px" width="60px" height="60.178px" viewBox="0 0 60 60.178" enable-background="new 0 0 60 60.178" xml:space="preserve">	
 										<use xlink:href="img/icons/allsvgs.svg#kkal" x="0" y="0"/> 
 									</svg>
-									
-									<!-- div class="FAT__picture">										
-									</div>		 -->
 									<div class="FAT__numeric">1200</div>
 									<div class="FAT__kkal">ккал</div>						
 								</div>
@@ -322,13 +300,11 @@
 						</ul>					
 					</div>
 					<a class="arrow arrow-burgersliderleft jcarousel-prev">
-						<span class="arrow__pic">
-							
+						<span class="arrow__pic">							
 						</span>
 					</a>					
 					<a class="arrow arrow-burgersliderright jcarousel-next">
-						<span class="arrow__pic">
-							
+						<span class="arrow__pic">							
 						</span>
 					</a>
 				</div>				
@@ -344,8 +320,8 @@
 								<li class="ourteam__item">
 									<div class="ourteam__name">Дэниэл Редклиф</div>
 									<div class="ourteam__info">						
-										<div class="ourteam__photo" style="background-image: url('img/content/teamphoto.png');">
-											<img src="" alt="our team">
+										<div class="ourteam__photo">
+											<img src="img/content/teamphoto.png" alt="our team">
 										</div>
 										<div class="ourteam__text">
 											<h4>Оператор</h4>
@@ -357,8 +333,8 @@
 								<li class="ourteam__item">
 									<div class="ourteam__name">Ричард Джеймс</div>
 									<div class="ourteam__info">
-										<div class="ourteam__photo" style="background-image: url('img/content/teamphoto.png');">
-											<img src="" alt="our team">
+										<div class="ourteam__photo">
+											<img src="img/content/teamphoto.png" alt="our team">
 										</div>
 										<div class="ourteam__text">
 											<h4>Оператор</h4>
@@ -370,8 +346,8 @@
 								<li class="ourteam__item">
 									<div class="ourteam__name">Джейк Финн</div>
 									<div class="ourteam__info">
-										<div class="ourteam__photo" style="background-image: url('img/content/teamphoto.png');">
-											<img src="" alt="our team">
+										<div class="ourteam__photo">
+											<img src="img/content/teamphoto.png" alt="our team">
 										</div>
 										<div class="ourteam__text">
 											<h4>Оператор</h4>
@@ -383,8 +359,8 @@
 								<li class="ourteam__item">
 									<div class="ourteam__name">Николай Иванов</div>
 									<div class="ourteam__info">
-										<div class="ourteam__photo" style="background-image: url('img/content/teamphoto.png');">
-											<img src="" alt="our team">
+										<div class="ourteam__photo">
+											<img src="img/content/teamphoto.png" alt="our team">
 										</div>
 										<div class="ourteam__text">
 											<h4>Оператор</h4>
@@ -400,9 +376,9 @@
 			</section>			
 			<section class="section section-menu" id="menu">
 				<div class="ourmenu">
-					<div class="section__container">
-						<h2 class="ourmenu__title section__title">Меню</h2>
-					</div>				
+					<!-- <div class="section__container"> -->
+					<h2 class="ourmenu__title section__title">Меню</h2>
+					<!-- </div>				 -->
 					<ul class="ourmenu__list">
 						<li class="ourmenu__item ourmenu__item-meetlovers">
 							<a href="#" class="ourmenu__link"><span class="ourmenu__text">Для мясоедов</span></a>
@@ -417,7 +393,9 @@
 							</div>
 						</li>
 						<li class="ourmenu__item ourmenu__item-dietaries">
-							<a href="#" class="ourmenu__link"><span class="ourmenu__text">Диетическое</span></a>
+							<a href="#" class="ourmenu__link">
+								<span class="ourmenu__text">Диетическое</span>
+							</a>
 							<div class="ourmenu__fulldesc">
 								<p class="ourmenu__fulltext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non dolore autem quisquam praesentium illum ratione, numquam earum quidem repellendus illo eos voluptatum dolorem ipsum sed maxime, ullam reprehenderit amet! Id soluta sit nostrum fuga quis, adipisci dolore sunt sint esse asperiores consequuntur possimus voluptates iusto quo suscipit, nulla sed illo officia atque rerum, non explicabo? Amet expedita animi, iusto consequatur distinctio, aliquam quaerat placeat eveniet commodi modi laboriosam id provident alias perspiciatis natus labore. Modi dolorum, dolore quo suscipit ipsum earum voluptas quidem obcaecati dicta harum eaque sint numquam ducimus eligendi natus libero eos nesciunt, laborum impedit tempore mollitia reiciendis facere esse cupiditate? Illum error cupiditate animi at quisquam placeat minus id accusamus deleniti porro. Numquam veritatis asperiores et est iste totam pariatur itaque fugiat, mollitia placeat labore aspernatur nisi corporis ea consequatur reiciendis maiores, vero sit. Unde autem fugit ullam impedit doloremque placeat, velit non ratione aperiam corrupti incidunt veniam exercitationem iusto sapiente nostrum provident animi itaque dignissimos dicta, nulla quo. Illum vero sequi in veritatis consequuntur mollitia ipsam voluptate tenetur deserunt possimus ipsum a quos commodi repellat consequatur, illo, ullam magni eveniet porro voluptatem! Maiores, iure. Cum facere esse dolores quaerat qui ex odit, earum quos fugit repudiandae.</p>
 							</div>
@@ -431,18 +409,13 @@
 							<li class="reviews__item">
 								<div class="review">
 									<div class="review__picture" style="background-image: url('img/content/photo1.png');">
-										<img src="" alt="review" class="review__img">	
+										<img src="img/content/photo1.png" alt="review1" class="review__img">
 									</div>
 									<div class="review__info">
 										<h4>Константин Спилберг</h4>
 										<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 										<div class="button button-review">
-											<a href="#" class="button__link button__link-showreview" data-fancybox data-src="#review__popup">Подробнее</a>
-										</div>
-										<div class="review__full" id="review__popup">
-											<span class="review__closefull">x</span>
-											<h4>Константин Спилберг</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias a cumque, quisquam eaque! Fuga qui fugiat dignissimos ducimus quas.</p>
+											<a href="#review__full" class="button__link button__link-showreview">Подробнее</a>
 										</div>
 									</div>										
 								</div>
@@ -450,18 +423,13 @@
 							<li class="reviews__item">
 								<div class="review">
 									<div class="review__picture" style="background-image: url('img/content/photo2.png');">
-										<img src="" alt="review" class="review__img">	
+										<img src="img/content/photo2.png" alt="review2" class="review__img">	
 									</div>
 									<div class="review__info">
 										<h4>Константин Спилберг</h4>
 										<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 										<div class="button button-review">
-											<a href="#" class="button__link button__link-showreview" data-fancybox data-src="#review__popup">Подробнее</a>
-										</div>
-										<div class="review__full" id="review__popup">
-											<span class="review__closefull">x</span>
-											<h4>Константин Спилберг</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias a cumque, quisquam eaque! Fuga qui fugiat dignissimos ducimus quas.</p>
+											<a href="#review__full" class="button__link button__link-showreview">Подробнее</a>
 										</div>
 									</div>								
 								</div>
@@ -469,114 +437,84 @@
 							<li class="reviews__item">
 								<div class="review">
 									<div class="review__picture" style="background-image: url('img/content/photo3.png');">
-										<img src="" alt="review" class="review__img">	
+										<img src="img/content/photo3.png" alt="review3" class="review__img">	
 									</div>
 									<div class="review__info">
 										<h4>Константин Спилберг</h4>
 										<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 										<div class="button button-review">
-											<a href="#" class="button__link button__link-showreview" data-fancybox data-src="#review__popup">Подробнее</a>
-										</div>
-										<div class="review__full" id="review__popup">
-											<span class="review__closefull">x</span>
-											<h4>Константин Спилберг</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias a cumque, quisquam eaque! Fuga qui fugiat dignissimos ducimus quas.</p>
-										</div>										
+											<a href="#review__full" class="button__link button__link-showreview">Подробнее</a>
+										</div>							
 									</div>									
 								</div>
 							</li>	
 							<li class="reviews__item">
 								<div class="review">
 									<div class="review__picture" style="background-image: url('img/content/photo4.png');">
-										<img src="" alt="review" class="review__img">	
+										<img src="img/content/photo4.png" alt="review4" class="review__img">	
 									</div>
 									<div class="review__info">
 										<h4>Константин Спилберг</h4>
 										<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 										<div class="button button-review">
-											<a href="#" class="button__link button__link-showreview" data-fancybox data-src="#review__popup">Подробнее</a>
-										</div>
-										<div class="review__full" id="review__popup">
-											<span class="review__closefull">x</span>
-											<h4>Константин Спилберг</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias a cumque, quisquam eaque! Fuga qui fugiat dignissimos ducimus quas.</p>
-										</div>										
+											<a href="#review__full" class="button__link button__link-showreview">Подробнее</a>
+										</div>							
 									</div>									
 								</div>
 							</li>	
 							<li class="reviews__item">
 								<div class="review">
 									<div class="review__picture" style="background-image: url('img/content/photo5.png');">
-										<img src="" alt="review" class="review__img">	
+										<img src="img/content/photo5.png" alt="review5" class="review__img">	
 									</div>
 									<div class="review__info">
 										<h4>Константин Спилберг</h4>
 										<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 										<div class="button button-review">
-											<a href="#" class="button__link button__link-showreview" data-fancybox data-src="#review__popup">Подробнее</a>
-										</div>
-										<div class="review__full" id="review__popup">
-											<span class="review__closefull">x</span>
-											<h4>Константин Спилберг</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias a cumque, quisquam eaque! Fuga qui fugiat dignissimos ducimus quas.</p>
-										</div>										
+											<a href="#review__full" class="button__link button__link-showreview">Подробнее</a>
+										</div>									
 									</div>										
 								</div>
 							</li>	
 							<li class="reviews__item">
 								<div class="review">
 									<div class="review__picture" style="background-image: url('img/content/photo6.png');">
-										<img src="" alt="review" class="review__img">	
+										<img src="img/content/photo6.png" alt="review6" class="review__img">	
 									</div>
 									<div class="review__info">
 										<h4>Константин Спилберг</h4>
 										<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 										<div class="button button-review">
-											<a href="#" class="button__link button__link-showreview" data-fancybox data-src="#review__popup">Подробнее</a>
-										</div>
-										<div class="review__full" id="review__popup">
-											<span class="review__closefull">x</span>
-											<h4>Константин Спилберг</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias a cumque, quisquam eaque! Fuga qui fugiat dignissimos ducimus quas.</p>
-										</div>										
+											<a href="#review__full" class="button__link button__link-showreview">Подробнее</a>
+										</div>									
 									</div>										
 								</div>
 							</li>	
 							<li class="reviews__item">
 								<div class="review">
 									<div class="review__picture" style="background-image: url('img/content/photo7.png');">
-										<img src="" alt="review" class="review__img">	
+										<img src="img/content/photo7.png" alt="review7" class="review__img">	
 									</div>
 									<div class="review__info">
 										<h4>Константин Спилберг</h4>
 										<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 										<div class="button button-review">
-											<a href="#" class="button__link button__link-showreview" data-fancybox data-src="#review__popup">Подробнее</a>
-										</div>
-										<div class="review__full" id="review__popup">
-											<span class="review__closefull">x</span>
-											<h4>Константин Спилберг</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias a cumque, quisquam eaque! Fuga qui fugiat dignissimos ducimus quas.</p>
-										</div>										
+											<a href="#review__full" class="button__link button__link-showreview">Подробнее</a>
+										</div>							
 									</div>										
 								</div>
 							</li>	
 							<li class="reviews__item">
 								<div class="review">
 									<div class="review__picture" style="background-image: url('img/content/photo8.png');">
-										<img src="" alt="review" class="review__img">	
+										<img src="img/content/photo8.png" alt="review8" class="review__img">	
 									</div>
 									<div class="review__info">
 										<h4>Константин Спилберг</h4>
 										<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 										<div class="button button-review">
-											<a href="#" class="button__link button__link-showreview" data-fancybox data-src="#review__popup">Подробнее</a>
-										</div>
-										<div class="review__full" id="review__popup">
-											<span class="review__closefull">x</span>
-											<h4>Константин Спилберг</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias a cumque, quisquam eaque! Fuga qui fugiat dignissimos ducimus quas.</p>
-										</div>										
+											<a href="#review__full" class="button__link button__link-showreview">Подробнее</a>
+										</div>					
 									</div>									
 								</div>
 							</li>	
@@ -587,68 +525,73 @@
 				<div class="section__container">
 					<div class="order">
 						<h2 class="order__title section__title">Закажите доставку</h2>
-						<form action="" class="formorder">
+						<form class="formorder" id="orderform" enctype="multipart/form-data" data-parsley-errors-messages-disabled>
 							<div class="formorder__left">
 								<div class="formorder__row">
 									<label class="formorder__item formorder__item-2">
-										<div class="formorder__itemtext">Имя</div>
-										<input type="text" class="formorder__input">
+										<span class="formorder__itemtext">Имя</span>
+										<input type="text" class="formorder__input" name="name" data-parsley-trigger="change" required="">
+										<span class="formorder__itemerror-desc">Введите имя</span>
 									</label>
 									<label class="formorder__item formorder__item-2">
-										<div class="formorder__itemtext">Телефон</div>
-										<input type="text" class="formorder__input formorder__input-phone">
+										<span class="formorder__itemtext">Телефон</span>
+										<input type="text" class="formorder__input formorder__input-phone" name="phone" data-parsley-trigger="change" required="">
+										<span class="formorder__itemerror-desc">Введите номер</span>
 									</label>
 								</div>
 								<div class="formorder__row">
 									<label class="formorder__item">
-										<div class="formorder__itemtext">Улица</div>
-										<input type="text" class="formorder__input">
+										<span class="formorder__itemtext">Улица</span>
+										<input type="text" class="formorder__input" name="street" data-parsley-trigger="change" required="">
+										<span class="formorder__itemerror-desc">Введите улицу</span>
 									</label>
 								</div>
 								<div class="formorder__row">
 									<label class="formorder__item formorder__item-4">
-										<div class="formorder__itemtext">Дом</div>
-										<input type="text" class="formorder__input">
+										<span class="formorder__itemtext">Дом</span>
+										<input type="text" class="formorder__input formorder__input-digit" name="house" data-parsley-validation-threshold="1" data-parsley-trigger="keyup" data-parsley-type="digits" required="">
+										<span class="formorder__itemerror-desc">Введите номер</span>
 									</label>
 									<label class="formorder__item formorder__item-4">
-										<div class="formorder__itemtext">Корпус</div>
-										<input type="text" class="formorder__input">
+										<span class="formorder__itemtext">Корпус</span>
+										<input type="text" class="formorder__input" name="houseblock" data-parsley-trigger="change">
 									</label>
 									<label class="formorder__item formorder__item-4">
-										<div class="formorder__itemtext">Квартира</div>
-										<input type="text" class="formorder__input">
+										<span class="formorder__itemtext">Квартира</span>
+										<input type="text" class="formorder__input formorder__input-digit" name="apartment" data-parsley-validation-threshold="1" data-parsley-trigger="keyup" data-parsley-type="digits" required="">
+										<span class="formorder__itemerror-desc">Введите номер</span>
 									</label>
 									<label class="formorder__item formorder__item-4">
-										<div class="formorder__itemtext">Этаж</div>
-										<input type="text" class="formorder__input">
+										<span class="formorder__itemtext">Этаж</span>
+										<input type="text" class="formorder__input formorder__input-digit" name="floor" data-parsley-validation-threshold="1" data-parsley-trigger="keyup" data-parsley-type="digits">
 									</label>
 								</div>
 							</div>
 							<div class="formorder__right">
 								<div class="formorder__row">
 									<label class="formorder__item">
-										<div class="formorder__itemtext">Комментарий</div>
-										<textarea class="formorder__input formorder__input-textarea" name=""></textarea>
+										<span class="formorder__itemtext">Комментарий</span>
+										<textarea class="formorder__input formorder__input-textarea" name="comment" data-parsley-maxlength="100"></textarea>
 									</label>
 								</div>
 								<div class="formorder__row formorder__row-anothermarginbottom">
 									<label class="formorder__item formorder__item-2">
 										<input type="radio" name="moneyinfo" class="formorder__payment formorder__payment-change">
-										<div class="formorder__itemtext formorder__itemtext-shift  formorder__itemtext-round">Потребуется сдача</div>
+										<span class="formorder__itemtext formorder__itemtext-shift  formorder__itemtext-round">Потребуется сдача</span>
 									</label>
 									<label class="formorder__item formorder__item-2">
 										<input type="radio" name="moneyinfo" class="formorder__payment formorder__payment-cardpayment">
-										<div class="formorder__itemtext formorder__itemtext-shift formorder__itemtext-round">Оплата по карте</div>
+										<span class="formorder__itemtext formorder__itemtext-shift formorder__itemtext-round">Оплата по карте</span>
 									</label>
 								</div>
 								<div class="formorder__row formorder__row-lessmarginbottom">
 									<label class="formorder__item">
 										<input type="checkbox" name="dontcallme" class="formorder__dontcall">
-										<div class="formorder__itemtext formorder__itemtext-shift formorder__itemtext-square">Не перезванивать</div>
+										<span class="formorder__itemtext formorder__itemtext-shift formorder__itemtext-square">Не перезванивать</span>
 									</label>
 								</div>
 								<div class="button button-makeorder">
-									<a href="#" class="button__link">Заказать</a>
+									<input class="button__link" type="submit" value="Заказать">
 								</div>	
 								<div class="button button-clean">
 									<button type="reset" class="button__link">Очистить</button>
@@ -660,6 +603,7 @@
 				</div>				
 			</section>			
 			<section class="section section-map" id="map">
+			 <div id="yamap"></div>
 				<footer class="footer">
 					<div class="container">
 						<div class="footer__left">
@@ -671,7 +615,6 @@
 								<li class="socials__item">
 									<a href="https://vk.com/" class="socials__link socials__link-vk">
 										<svg class="socials__icon" width="23" height="13" viewBox="0 0 126 72" enable-background="new 0 0 126 72" xml:space="preserve">
-											<!-- <use xlink:href="#vk" x="0" y="0"/> --> 
 											<use xlink:href="img/icons/allsvgs.svg#vk" x="0" y="0"/>
 										</svg>				
 									</a>
@@ -679,7 +622,6 @@
 								<li class="socials__item">
 									<a href="https://ru-ru.facebook.com/" class="socials__link socials__link-fb">
 										<svg class="socials__icon" width="20" height="20" viewBox="0 0 36.711 36.711" enable-background="new 0 0 36.711 36.711" xml:space="preserve">
-											<!-- <use xlink:href="#fb" x="0" y="0"/> -->
 											<use xlink:href="img/icons/allsvgs.svg#fb" x="0" y="0"/>
 										</svg>
 									</a>
@@ -687,7 +629,6 @@
 								<li class="socials__item">
 									<a href="https://www.instagram.com/" class="socials__link socials__link-inst">
 										<svg class="socials__icon" width="20" height="17" viewBox="0 0 36.663 36.664" enable-background="new 0 0 36.663 36.664" xml:space="preserve">
-											<!-- <use xlink:href="#inst" x="0" y="0"/> -->
 											<use xlink:href="img/icons/allsvgs.svg#inst" x="0" y="0"/>
 										</svg>
 									</a>
@@ -695,7 +636,6 @@
 								<li class="socials__item">
 									<a href="https://twitter.com/" class="socials__link socials__link-tw">
 										<svg class="socials__icon" width="20" height="20" viewBox="0 0 37.453 31.21" enable-background="new 0 0 37.453 31.21" xml:space="preserve">
-											<!-- <use xlink:href="#tw" x="0" y="0"/> -->
 											<use xlink:href="img/icons/allsvgs.svg#tw" x="0" y="0"/>
 										</svg>
 									</a>
@@ -710,15 +650,19 @@
 			<span class="arrow__pic">				
 			</span>
 		</a>
-		<a href="#firstscreen" class="arrow arrow-totop">
-			<span class="arrow__pic">
-<!-- 				<svg class="arrow__picturesvg" x="0px" y="0px" >
-					<use xlink:href="#arrow" x="0" y="0"/> 			
-					<use xlink:href="img/icons/allsvgs.svg#arrow" x="0" y="0"/> 
-				</svg>	 -->	
-			</span>
-		</a>
-		</a>
+		<div class="review__full" id="review__full" style="display: none;">
+			<span class="review__closefull">x</span>
+			<h4>Константин Спилберг</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias a cumque, quisquam eaque! Fuga qui fugiat dignissimos ducimus quas.</p>
+		</div>
+		<div class="formpopup" id="formsuccess" style="display: none;">
+			<span class="formpopup__close">x</span>
+			<h4>Сообщение отправлено</h4>
+		</div>
+		<div class="formpopup" id="formerror" style="display: none;">
+			<span class="formpopup__close">x</span>
+			<h4>Сообщение не отправлено</h4>
+		</div>
 		<div class="navigation">
 			<ul class="navigation__list">
 				<li class="navigation__item">
@@ -747,12 +691,12 @@
 				</li>					
 			</ul>
 		</div>	
-		<div class="screencover"></div>
 	</div>
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
 <script type="text/javascript" src="js/jquery.inputmask.bundle.min.js"></script>
+<script type="text/javascript" src="js/parsley.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

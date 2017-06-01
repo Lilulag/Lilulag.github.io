@@ -29,7 +29,7 @@
 	}
 
 	&__img{
-		display: none;
+		visibility: hidden;
 	}
 
 	&__info{
@@ -57,9 +57,10 @@
 
 	&__full{
 		color: $almost-black-color;
+		background-color: #fff;
 		border-radius: 5px;
-		display: none;
-		width: 460px;
+		//display: none;
+		//width: 460px;
 		max-height: 500px;
    		padding: 25px 20px;
    		position: relative;

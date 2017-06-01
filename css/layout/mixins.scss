@@ -51,7 +51,7 @@ $static_width: 940px;
 //для центрирования содержимого секций
 %section_center_content{
 	margin: 0 auto;
-	position: relative; 
+	position: absolute;
 	top: 50%; 
 	transform: 
 	translateY(-50%);

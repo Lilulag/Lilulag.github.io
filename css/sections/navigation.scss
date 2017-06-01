@@ -20,20 +20,18 @@ $nav_item_size: 16px;
 	width: $nav_item_size;
 	margin: 0 auto 4px;
 	position: relative;
-
 }
 
 .navigation__button{
 	display: block;
 	width: $nav_item_size; height: $nav_item_size;	
 
-
 	&::before{
 		content: '';
 		position: absolute;
 		top: 50%;	left: 50%;
 		transform: translate(-50%, -50%);
-		background-color: #fff;//#fff;
+		background-color: #fff;
 		border: 1px solid $deep-orange-color;//#fff;
 		border-radius: 50%;
 		height: 6px;
@@ -64,21 +62,21 @@ $nav_item_size: 16px;
 		transform: translateX(-50%);		
 	}
 
-	&-totop{
-		display: none;
-		position: fixed;
-		bottom: 40px; right: 40px;
-		transform: rotate(180deg);
-		height: 80px;
-		width: 80px;
-		background-color: rgba($deep-orange-color, 0.6);
-		border-radius: 50%;
+	// &-totop{
+	// 	display: none;
+	// 	position: fixed;
+	// 	bottom: 40px; right: 40px;
+	// 	transform: rotate(180deg);
+	// 	height: 80px;
+	// 	width: 80px;
+	// 	background-color: rgba($deep-orange-color, 0.6);
+	// 	border-radius: 50%;
 
-		& .arrow__pic{
-			height: 20px;
-    		width: 30px;
-    	}
-	}
+	// 	& .arrow__pic{
+	// 		height: 20px;
+ //    		width: 30px;
+ //    	}
+	// }
 
 	&.arrow-gonextsection:not(.nohover):hover &__pic{
 		transform: translateY(-100%);
@@ -87,7 +85,7 @@ $nav_item_size: 16px;
 	&__pic{
 		height: 15px;
 		width: 30px;
-		transition: transform 0.3s linear;//, opacity 3s linear;
+		transition: transform 0.3s linear;
 	}
 
 }

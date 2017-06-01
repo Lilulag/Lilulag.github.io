@@ -25,16 +25,16 @@ $(document).ready(function(){
 	
 	//	аккордеон в menu начало	
 	(function(){
-			var activeItem = $('.ourmenu__item.active');;
+			var activeItem = $('.ourmenu__item.active');
 
 			var noActiveWidth0 = function(obj){
-				console.log('tuta');
 				obj.stop(true).animate(
 	  			{
 	   				width: '80px'
 	  			}, 	800,
 	  			function(){
-	  				obj.removeClass('active')
+	  				obj.removeClass('active');
+	  				activeItem = $('.ourmenu__item.active');
 	  			});				
 			};
 
@@ -45,7 +45,7 @@ $(document).ready(function(){
 
 			if ($this.hasClass('active'))
 				{
-					noActiveWidth0($this);
+					noActiveWidth0($this)
 				}
 			else
 				{
@@ -56,13 +56,13 @@ $(document).ready(function(){
 				}
 
 			activeItem = $('.ourmenu__item.active');
-		})
-
+		});
 			//прячем открытое меню по клику не на него начало
 		$('.wrapper').on('click', function(e){
 			activeItem.length && !($(e.target).closest('.ourmenu__list').length) && noActiveWidth0(activeItem);
+			activeItem = $('.ourmenu__item.active');
 		})	//прячем открытое меню по клику не на него окончание
-
+	
 	})();	
 	//	аккордеон в menu окончание
 	
@@ -89,17 +89,20 @@ $(document).ready(function(){
 	        	carousel: carousel
 	    	});
 
-		});//временно карусель сторонним плагином окончание
+		});//карусель jcarousel окончание
+	
 	})();	
 	//	карусель jcarousel окончание
 
 
 	//	скрываем видео по завершению начало
 	(function(){
+
 		$('.is_overlay video').attr("autoplay", "autoplay").delay(22000).animate(
   			{
    				opacity: "0"
   			}, 2500);
+	
 	})();
 	//	скрываем видео по завершению  окончание
 
@@ -111,9 +114,8 @@ $(document).ready(function(){
 	  	var allSections = $('.section');
 	  	var allRoundNavLinks = $('.navigation__item .navigation__button');
 	  	var touchMultiScroll = false;
-	  	//тут присвоить href
- 
-		$('.mainmenu__link, .navigation__button, .button-notform .button__link, .arrow-gonextsection, .arrow-totop').on("click", function(e){	//
+
+		$('.mainmenu__link, .navigation__button, .button-notform .button__link, .arrow-gonextsection').on("click", function(e){	//, .arrow-totop
 		    e.preventDefault();
 
 		    var $this = $(this);
@@ -121,44 +123,7 @@ $(document).ready(function(){
 		    var SectionNum = allSections.filter(href).index();
 
 		    scrolligPage(SectionNum);
-		    
-		 //    var SectionTop = allSections.filter(href).offset().top;
-			// //var SectionTop = AllSections.filter(href).offset().top;
-
-		 //    $("html, body").animate(
-		 //      {
-		 //        scrollTop: SectionTop
-		 //      },
-		 //      1200
-		 //    );
-
 		});
-
-	  	// $(window).scroll(function(){
-		  //   var wScrollTop = $(window).scrollTop();//прокручено от верхней границы
-
-		    // $(".section").each(function(){
-		    //   var $this = $(this);
-		    //   var windowMargin = 00; 
-		    //   var sectionPos = $this.offset().top - windowMargin; //расстояние от верхней границы окна до секции - 100px
-		    //   var sectionBottom = sectionPos + $this.height();
-
-			      // if (wScrollTop > sectionPos && wScrollTop < sectionBottom) {
-
-			      //   var id = '#' + $this.attr('id');
-			      //   var AllSecLinks = $('.mainmenu__link');
-
-			      //   var ActiveLink = AllSecLinks.filter(function(){
-			      //     return $(this).attr('href') == id;
-			      //   });
-
-			      //   AllSecLinks.removeClass('active');
-			      //   ActiveLink.addClass('active');
-			      // }
-
-		    //});		//each окончание
-
-	  	//});			//scroll окончание
 
 	  	var toggleActiveClass = function(elems, number){
 	  		elems.removeClass('active').eq(number).addClass('active');
@@ -178,17 +143,13 @@ $(document).ready(function(){
 		  		toggleActiveClass(allSections, sectionNumber);
 		  		toggleActiveClass(allRoundNavLinks, sectionNumber);
 
-		  		// allSections.eq(sectionNumber).addClass('active').siblings().removeClass('active');
-		  		// allRoundNavLinks.eq(sectionNumber).addClass('active').siblings().removeClass('active');
 
-		  		if (allSections.eq(sectionNumber + 1).length > 0){//если секция не последняя
+		  	if (sectionNumber == 0){//если секция первая					
 		  			var nextSectionName = '#'+ allSections.eq(sectionNumber + 1).attr('id');
 					$('.arrow-gonextsection').attr('href', nextSectionName).show(1500).removeClass('nohover'); 	
-					$('.arrow-totop').hide(300);
 		  		}
-		  		else{											//если секция последняя
+		  		else{											//если секция не первая
 					$('.arrow-gonextsection').addClass('nohover').hide(1500);
-					$('.arrow-totop').delay(500).show(500);
 		  		}
 
 		  		setTimeout(function(){
@@ -232,8 +193,9 @@ $(document).ready(function(){
 	})();
 	//	OPS окончание	
 
+
 	//	popup начало
-	$(function(){
+	(function () {
 
 		$('.button__link-showreview').fancybox({
 				type: 'inline',
@@ -243,21 +205,153 @@ $(document).ready(function(){
 			});	
 
 		$('.review__closefull').on('click', function(){
-			$.fancybox.close(  );//all
+			$.fancybox.close();
 		});
 
-	})
+	})();
 	//	popup окончание
 
+
 	//	mask начало
-	$(function(){
+	(function(){
 
 		$('.formorder__input-phone').inputmask('+7(999)9999999'); 
 
-	})
+	})();
 	//	mask окончание
 
-})//ready end
+	//  maps начало
+	(function(){
+
+		ymaps.ready(init);
+	    var myMap,
+	    	myCollection;
+
+	    function init(){ 
+			myMap = new ymaps.Map('yamap', {
+		            center: [59.90753684, 30.36965782], 
+		            zoom: 12,
+		            controls: ['zoomControl']
+		        });
+
+			myMap.behaviors.disable('scrollZoom');
+            
+			var coords = [
+				[59.89616196, 30.42555547],[59.93609989, 30.33353766],[59.90467678, 30.32989844]
+			]
+
+			 myCollection = new ymaps.GeoObjectCollection({
+                 hintContent: 'Burgers',
+                 balloonContent: 'Лучшие бургеры' 			 	
+			 }, {
+			 	iconLayout: 'default#image',
+        		iconImageHref: 'img/icons/map-marker.svg',
+        		iconImageSize: [46, 58],
+        		iconImageOffset: [-20, -50]
+		    });
+
+			for (var i = 0; i < coords.length; i++) {
+			    myCollection.add(new ymaps.Placemark(coords[i]));
+			};
+
+            myMap.geoObjects.add(myCollection);
+        }
+
+	})();	
+	//  maps окончание
+
+	//form order
+	(function(){
+		$(".formorder__input-digit").keydown(function (e) {        
+        	if  (($.inArray(e.keyCode, [46, 8, 9, 27, 37, 39, 13, 110]) !== -1) ||
+        		(e.keyCode >= 48 && e.keyCode <= 57)) {
+                 return;
+            	}
+            else e.preventDefault();
+        });
+        
+		$('#orderform').parsley().on('form:error', function() {
+		    $.each(this.fields, function(key, field) {
+		      if (field.validationResult !== true) {
+		        field.$element.closest('.formorder__item').addClass('bt-flabels__error');
+		      }
+		    });
+		});
+		  
+		$('#orderform').parsley().on('field:validated', function() {
+		    if (this.validationResult === true) {
+		      this.$element.closest('.formorder__item').removeClass('bt-flabels__error');
+		    } else {
+		      this.$element.closest('.formorder__item').addClass('bt-flabels__error');
+		    }
+		});
+
+		$('#orderform').on('submit', function(e){
+			e.preventDefault();
+			 //console.log('form!!!');
+// console.log( $(this).serialize() );
+			var thisForm = $(this);
+			var formData = thisForm.serialize();		
+
+
+			$.ajax({
+				url: 'mail.php',
+				type: 'POST',
+				data: formData,
+				success: function(fromrequest){
+					var jsonData = JSON.parse(fromrequest);
+					// console.dir(jsonData)
+					if (jsonData.requestStatus){//запрос отправлен
+						//console.log('success request'),
+
+						$.fancybox.open([
+							{href : '#formsuccess'}
+							],{
+							type: 'inline',
+							width: 260,
+							fitToView: false,
+							padding: 0,
+							afterClose: function(){
+								thisForm.trigger('reset');	
+							}
+						})
+
+						$('.formpopup__close').on('click', function(){
+							$.fancybox.close();
+							thisForm.parsley().on('form:submit', function() {
+    							return true; 
+  							});
+						});
+
+					}
+					else{//запрос не отправлен
+						$.fancybox.open([
+							{href : '#formerror'}
+							],{
+							type: 'inline',
+							width: 260,
+							fitToView: false,
+							padding: 0
+						})
+
+						$('.formpopup__close').on('click', function(){
+							$.fancybox.close();
+							// thisForm.parsley().on('form:submit', function() {
+    			// 				return false; 
+  					// 		});
+						});
+					}
+				}
+
+			});
+		
+		});        
+
+
+	})();
+
+
+});//ready end
 
 
 
